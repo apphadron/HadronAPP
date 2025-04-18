@@ -1,0 +1,178 @@
+{
+  "unidades": [
+    {
+      "grandeza": "Aceleração",
+      "simbolo": "m/s²",
+      "tipo": "Derivada",
+      "unidade": "Metro por Segundo Quadrado"
+    },
+    {
+      "grandeza": "Capacitância",
+      "simbolo": "F",
+      "tipo": "Derivada",
+      "unidade": "Farad"
+    },
+    {
+      "grandeza": "Carga Elétrica",
+      "simbolo": "C",
+      "tipo": "Derivada",
+      "unidade": "Coulomb"
+    },
+    {
+      "grandeza": "Comprimento",
+      "simbolo": "m",
+      "tipo": "Fundamental",
+      "unidade": "Metro"
+    },
+    {
+      "grandeza": "Condutância Elétrica",
+      "simbolo": "S",
+      "tipo": "Derivada",
+      "unidade": "Siemens"
+    },
+    {
+      "grandeza": "Corrente Elétrica",
+      "simbolo": "A",
+      "tipo": "Fundamental",
+      "unidade": "Ampere"
+    },
+    {
+      "grandeza": "Densidade",
+      "simbolo": "kg/m³",
+      "tipo": "Derivada",
+      "unidade": "Quilograma por Metro Cúbico"
+    },
+    {
+      "grandeza": "Energia",
+      "simbolo": "J",
+      "tipo": "Derivada",
+      "unidade": "Joule"
+    },
+    {
+      "grandeza": "Fluxo Magnético",
+      "simbolo": "Wb",
+      "tipo": "Derivada",
+      "unidade": "Weber"
+    },
+    {
+      "grandeza": "Força",
+      "simbolo": "N",
+      "tipo": "Derivada",
+      "unidade": "Newton"
+    },
+    {
+      "grandeza": "Frequência",
+      "simbolo": "Hz",
+      "tipo": "Derivada",
+      "unidade": "Hertz"
+    },
+    {
+      "grandeza": "Indutância",
+      "simbolo": "H",
+      "tipo": "Derivada",
+      "unidade": "Henry"
+    },
+    {
+      "grandeza": "Indução Magnética",
+      "simbolo": "T",
+      "tipo": "Derivada",
+      "unidade": "Tesla"
+    },
+    {
+      "grandeza": "Intensidade Luminosa",
+      "simbolo": "cd",
+      "tipo": "Fundamental",
+      "unidade": "Candela"
+    },
+    {
+      "grandeza": "Intensidade Sonora",
+      "simbolo": "W/m²",
+      "tipo": "Derivada",
+      "unidade": "Potência por Área"
+    },
+    {
+      "grandeza": "Luminância",
+      "simbolo": "cd/m²",
+      "tipo": "Derivada",
+      "unidade": "Candela por Metro Quadrado"
+    },
+    {
+      "grandeza": "Massa",
+      "simbolo": "kg",
+      "tipo": "Fundamental",
+      "unidade": "Quilograma"
+    },
+    {
+      "grandeza": "Nível Sonoro",
+      "simbolo": "dB",
+      "tipo": "Derivada",
+      "unidade": "Decibéis"
+    },
+    {
+      "grandeza": "Potencial Elétrico",
+      "simbolo": "V",
+      "tipo": "Derivada",
+      "unidade": "Volt"
+    },
+    {
+      "grandeza": "Potência",
+      "simbolo": "W",
+      "tipo": "Derivada",
+      "unidade": "Watt"
+    },
+    {
+      "grandeza": "Pressão",
+      "simbolo": "Pa",
+      "tipo": "Derivada",
+      "unidade": "Pascal"
+    },
+    {
+      "grandeza": "Quantidade de Substância",
+      "simbolo": "mol",
+      "tipo": "Fundamental",
+      "unidade": "Mol"
+    },
+    {
+      "grandeza": "Resistência Elétrica",
+      "simbolo": "Ω",
+      "tipo": "Derivada",
+      "unidade": "Ohm"
+    },
+    {
+      "grandeza": "Temperatura",
+      "simbolo": "K",
+      "tipo": "Fundamental",
+      "unidade": "Kelvin"
+    },
+    {
+      "grandeza": "Temperatura Celsius",
+      "simbolo": "°C",
+      "tipo": "Derivada",
+      "unidade": "Grau Celsius"
+    },
+    {
+      "grandeza": "Tempo",
+      "simbolo": "s",
+      "tipo": "Fundamental",
+      "unidade": "Segundo"
+    },
+    {
+      "grandeza": "Velocidade",
+      "simbolo": "m/s",
+      "tipo": "Derivada",
+      "unidade": "Metro por Segundo"
+    },
+    {
+      "grandeza": "Volume",
+      "simbolo": "m³",
+      "tipo": "Derivada",
+      "unidade": "Metro Cúbico"
+    },
+    {
+      "grandeza": "Área",
+      "simbolo": "m²",
+      "tipo": "Derivada",
+      "unidade": "Metro Quadrado"
+    }
+  ]
+}

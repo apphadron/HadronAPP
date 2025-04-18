@@ -1,0 +1,9 @@
+export { default as AnaAmarela } from './AnaAmarela.png';
+export { default as AnaBranca } from './AnaBranca.png';
+export { default as AnaMarrom } from './AnaMarrom.png';
+export { default as EstrelaDeNeutros } from './EstrelaDeNeutros.png';
+export { default as GiganteVermelha } from './GiganteVermelha.png';
+export { default as NebulosaEstelar } from './NebulosaEstelar.png';
+export { default as ProtoEstrela } from './ProtoEstrela.png';
+export { default as SupergiganteAzul } from './SuperGiganteAzul.png';
+export { default as SupergiganteVermelha } from './SuperGiganteVermelha.png';

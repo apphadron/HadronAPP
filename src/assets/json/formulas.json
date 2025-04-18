@@ -1,0 +1,1478 @@
+{
+    "formulas": [
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "Vm = \\Delta S / \\Delta T",
+            "nome": "Velocidade Média",
+            "variaveis": {
+                "Vm": "velocidade média (m/s)",
+                "\\Delta S": "variação do espaço (m)",
+                "\\Delta T": "variação do tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "am = \\Delta v / \\Delta t",
+            "nome": "Aceleração Média",
+            "variaveis": {
+                "am": "aceleração média (m/s^{2})",
+                "\\Delta v": "variação da velocidade (m/s)",
+                "\\Delta t": "variação do tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "S = S_{0} + v \\cdot t",
+            "nome": "Função Horária do Deslocamento",
+            "variaveis": {
+                "S": "posição final do móvel (m)",
+                "S_0": "posição inicial do móvel (m)",
+                "v": "velocidade do móvel (m/s)",
+                "t": "intervalo de tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "V = V_{0} + a \\cdot t",
+            "nome": "Velocidade",
+            "variaveis": {
+                "V": "velocidade final (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "a": "aceleração (m/s²)",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "S = S_0 + V_0\\cdot t + 1/2\\cdot a\\cdot t^{2}",
+            "nome": "Função Horária da Posição",
+            "variaveis": {
+                "S": "posição final (m)",
+                "S_0": "posição inicial (m)",
+                "V_0": "velocidade inicial (m/s)",
+                "a": "aceleração (m/s^{2})",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "v^{2} = V_0^{2} + 2\\cdot a\\cdot \\Delta S",
+            "nome": "Equação de Torricelli",
+            "variaveis": {
+                "v": "velocidade final (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "a": "aceleração (m/s^{2})",
+                "\\Delta S": "variação da posição (m)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "vx = V_0 \\cdot   cos(\\theta    )",
+            "nome": "Componente horizontal da velocidade",
+            "variaveis": {
+                "vx": "velocidade na direção horizontal (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "vy = V_0 \\cdot   sin(\\theta    ) - g \\cdot   t",
+            "nome": "Componente vertical da velocidade",
+            "variaveis": {
+                "vy": "velocidade na direção vertical (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)",
+                "g": "aceleração da gravidade (m/s^{2})",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "x = V_0 \\cdot   cos(\\theta    ) \\cdot   t",
+            "nome": "Função horária da posição horizontal",
+            "variaveis": {
+                "x": "posição na direção horizontal (m)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "y = V_0 \\cdot   sin(\\theta    ) \\cdot   t - 1/2 \\cdot   g \\cdot   t^{2}",
+            "nome": "Função horária da posição vertical",
+            "variaveis": {
+                "y": "posição na direção vertical (m)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)",
+                "g": "aceleração da gravidade (m/s^{2})",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\omega   m = \\Delta \\phi     / \\Delta t",
+            "nome": "Velocidade Angular Média",
+            "variaveis": {
+                "\\omega   m": "velocidade angular média (rad/s)",
+                "\\Delta \\phi    ": "deslocamento angular (rad)",
+                "\\Delta t": "intervalo de tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\phi = \\phi_{0} + \\omega_{0} \\cdot   t",
+            "nome": "Posição Angular",
+            "variaveis": {
+                "\\phi": "posição angular (rad)",
+                "\\phi_{0}": "posição angular inicial (rad)",
+                "\\omega_{0}": "velocidade angular inicial (rad/s)",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "v = R \\cdot \\omega",
+            "nome": "Velocidade Radial",
+            "variaveis": {
+                "v": "velocidade tangencial (m/s)",
+                "R": "raio da trajetória circular (m)",
+                "\\omega": "velocidade angular (rad/s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "ac = v^{2} / R",
+            "nome": "Aceleração Centripeta",
+            "variaveis": {
+                "ac": "aceleração centrípeta (m/s^{2})",
+                "v": "velocidade tangencial (m/s)",
+                "R": "raio da trajetória circular (m)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\omega = \\omega_{0} + \\alpha   \\cdot   t",
+            "nome": "Velocidade Angular",
+            "variaveis": {
+                "\\omega": "velocidade angular (rad/s)",
+                "\\omega_{0}": "velocidade angular inicial (rad/s)",
+                "\\alpha": "aceleração angular (rad/s^{2})",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\phi = \\phi_{0} + \\omega_{0} \\cdot   t + 1/2 \\cdot   \\alpha \\cdot  t^{2}",
+            "nome": "Função horária da posição angula",
+            "variaveis": {
+                "\\phi": "posição angular (rad)",
+                "\\phi_{0}": "posição angular inicial (rad)",
+                "\\omega_{0}": "velocidade angular inicial (rad/s)",
+                "\\alpha": "aceleração angular (rad/s^{2})",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\alpha   = \\Delta \\omega  / \\Delta t",
+            "nome": "Aceleração Angular",
+            "variaveis": {
+                "\\alpha  ": "aceleração angular (rad/s^{2})",
+                "\\Delta \\omega   ": "variação da velocidade angular (rad/s)",
+                "\\Delta t": "variação do tempo (s)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "at = R \\cdot   \\alpha  ",
+            "nome": "Aceleração Tangencial",
+            "variaveis": {
+                "at": "aceleração tangencial (m/s^{2})",
+                "R": "raio da trajetória circular (m)",
+                "\\alpha  ": "aceleração angular (rad/s^{2})"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "∑F = 0",
+            "nome": "Primeira Lei de Newton (Princípio da Inércia)",
+            "variaveis": {
+                "∑F": "Força resultante"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "∑F = m \\cdot   a",
+            "nome": "Segunda Lei de Newton (forma escalar)",
+            "variaveis": {
+                "∑F": "Força resultante",
+                "m": "massa",
+                "a": "aceleração"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "∑F = m \\cdot   a",
+            "nome": "Segunda Lei de Newton (forma vetorial)",
+            "variaveis": {
+                "∑F": "Força resultante",
+                "m": "massa",
+                "a": "aceleração"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "P = m \\cdot   g",
+            "nome": "Peso de um corpo",
+            "variaveis": {
+                "P": "Peso",
+                "m": "massa",
+                "g": "aceleração da gravidade"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "Fat ≤ μs \\cdot   N",
+            "nome": "Força de atrito estático",
+            "variaveis": {
+                "Fat": "Força de atrito estático",
+                "μs": "coeficiente de atrito estático",
+                "N": "força normal"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "Fat = μd \\cdot   N",
+            "nome": "Força de atrito dinâmico",
+            "variaveis": {
+                "Fat": "Força de atrito dinâmico",
+                "μd": "coeficiente de atrito dinâmico",
+                "N": "força normal"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "F = -k \\cdot   x",
+            "nome": "Lei de Hooke",
+            "variaveis": {
+                "F": "Força elástica",
+                "k": "constante elástica",
+                "x": "deformação"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "Fc = m \\cdot   v² / r",
+            "nome": "Força centrípeta",
+            "variaveis": {
+                "Fc": "Força centrípeta",
+                "m": "massa",
+                "v": "velocidade",
+                "r": "raio"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "τ = F \\cdot   d \\cdot   cos(\\theta    )",
+            "nome": "Trabalho de uma força constante",
+            "variaveis": {
+                "τ": "Trabalho",
+                "F": "força",
+                "d": "deslocamento",
+                "\\theta    ": "ângulo entre F e d"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "P = τ / \\Delta t",
+            "nome": "Potência média",
+            "variaveis": {
+                "P": "Potência média",
+                "τ": "trabalho",
+                "\\Delta t": "intervalo de tempo"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "P = F \\cdot   v",
+            "nome": "Potência instantânea",
+            "variaveis": {
+                "P": "Potência instantânea",
+                "F": "força",
+                "v": "velocidade"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Ec = (1/2) \\cdot   m \\cdot   v²",
+            "nome": "Energia cinética",
+            "variaveis": {
+                "Ec": "Energia cinética",
+                "m": "massa",
+                "v": "velocidade"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Ep = m \\cdot   g \\cdot   h",
+            "nome": "Energia potencial gravitacional",
+            "variaveis": {
+                "Ep": "Energia potencial gravitacional",
+                "m": "massa",
+                "g": "aceleração da gravidade",
+                "h": "altura"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Eel = (1/2) \\cdot   k \\cdot   x²",
+            "nome": "Energia potencial elástica",
+            "variaveis": {
+                "Eel": "Energia potencial elástica",
+                "k": "constante elástica",
+                "x": "deformação"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Em = Ec + Ep",
+            "nome": "Energia mecânica",
+            "variaveis": {
+                "Em": "Energia mecânica",
+                "Ec": "Energia cinética",
+                "Ep": "Energia potencial"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Quantidade de Movimento",
+            "formula": "Q = m \\cdot   v",
+            "nome": "Quantidade de movimento",
+            "variaveis": {
+                "Q": "Quantidade de movimento",
+                "m": "massa",
+                "v": "velocidade"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Quantidade de Movimento",
+            "formula": "I = F \\cdot   \\Delta t",
+            "nome": "Impulso",
+            "variaveis": {
+                "I": "Impulso",
+                "F": "força",
+                "\\Delta t": "intervalo de tempo"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "P = d\\cdot g\\cdot h",
+            "nome": "Pressão Hidroestatica",
+            "variaveis": {
+                "P": "pressão (Pa)",
+                "d": "densidade do fluido (kg/m³)",
+                "g": "aceleração da gravidade (m/s^{2})",
+                "h": "profundidade (m)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "E = d\\cdot V\\cdot g",
+            "nome": "Empuxo",
+            "variaveis": {
+                "E": "empuxo (N)",
+                "d": "densidade do fluido (kg/m³)",
+                "V": "volume do fluido deslocado (m³)",
+                "g": "aceleração da gravidade (m/s^{2})"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "P = F/A",
+            "nome": "Pressão Superficial",
+            "variaveis": {
+                "P": "Pressão (Pa)",
+                "F": "Força (N)",
+                "A": "Area(m)"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "D = m/V",
+            "nome": "Densidade",
+            "variaveis": {
+                "D": "Densidade",
+                "m": "massa",
+                "V": "Volume"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "\\Delta P = d\\cdot  g\\cdot  \\Delta h",
+            "nome": "Teorema de Stevin",
+            "variaveis": {
+                "\\Delta P": "Variação da pressão",
+                "d": "densidade",
+                "g": "gravidade",
+                "\\Delta h": "variação da altura"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Calorimetria",
+            "formula": "C = Q/\\Delta \\theta = m \\cdot  c",
+            "nome": "Capacidade térmica",
+            "variaveis": {
+                "Q": "quantidade de calor",
+                "c": "calor especifico",
+                "m": "massa",
+                "\\Delta theta": "variação da temperatura"
+            }
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Calorimetria",
+            "formula": "\\Phi = Q/\\Delta t",
+            "nome": "Fluxo de Calor",
+            "variaveis": {
+                "Phi": "fluxo de calor",
+                "Q": "quantidade de calor",
+                "\\Delta t": "variação do tempo"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Calorimetria",
+            "formula": "Q = m \\cdot c \\cdot \\Delta T",
+            "nome": "Calor Sensivel",
+            "variaveis": {
+                "Q": "quantidade de calor (J)",
+                "m": "massa da substância (kg)",
+                "c": "calor específico da substância (J/kg\\cdot K)",
+                "\\Delta T": "variação de temperatura (K)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Calorimetria",
+            "formula": "Q = m\\cdot L",
+            "nome": "Calor Latente",
+            "variaveis": {
+                "Q": "quantidade de calor (J)",
+                "m": "massa da substância (kg)",
+                "L": "calor latente da substância (J/kg)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P\\cdot V = n\\cdot R\\cdot T",
+            "nome": "Lei dos gases ideais",
+            "variaveis": {
+                "P": "pressão (Pa)",
+                "V": "volume (m^{3})",
+                "n": "número de mols",
+                "R": "constante universal dos gases (8\\cdot 31 J/mol\\cdot K)",
+                "T": "temperatura absoluta (K)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P₁\\cdot V₁/T₁ = P₂\\cdot V₂/T₂",
+            "nome": "Lei geral dos gases",
+            "variaveis": {
+                "P1": "Pressão inicial",
+                "V1": "Volume inicial",
+                "T1": "temperatura inicial",
+                "P2": "Pressão final",
+                "V2": "Volume final",
+                "T2": "temperatura final"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P\\cdot V = constante (T constante)",
+            "nome": "Lei de Boyle",
+            "variaveis": {
+                "P": "pressão",
+                "V": "volume",
+                "T": "temperatura constante"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "V/T = constante (P constante)",
+            "nome": "Lei de Charles",
+            "variaveis": {
+                "V": "volume",
+                "T": "temperatura",
+                "P": "pressão constante"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P/T = constante (V constante)",
+            "nome": "Lei de Gay-Lussac",
+            "variaveis": {
+                "P": "pressão",
+                "T": "temperatura",
+                "V": "volume constante"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "V1/T1 = V2/T2",
+            "nome": "Transformação Isobárica",
+            "variaveis": {
+                "V": "volume",
+                "T": "temperatura"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P1/T1 = P2/T2",
+            "nome": "Transformação Isométrica",
+            "variaveis": {
+                "P": "Pressão",
+                "T": "temperatura"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P1 \\cdot V1=P2 \\cdot V2",
+            "nome": "Transformação Isotérmica",
+            "variaveis": {
+                "P": "Pressão",
+                "V": "Volume"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P1 \\cdot V1^{\\gamma} = P2 \\cdot V2^{\\gamma}",
+            "nome": "Transformação adiabática ",
+            "variaveis": {
+                "P": "Pressão",
+                "V": "Volume",
+                "\\gamma": "Coeficiente que depende da atomicidade do gás"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "T1 \\cdot V1^{\\gamma} = T2 \\cdot V2^{\\gamma}",
+            "nome": "Transformação adiabática",
+            "variaveis": {
+                "T": "Temperatura",
+                "V": "Volume",
+                "\\gamma": "Coeficiente que depende da atomicidade do gás"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "n=n/M",
+            "nome": "Número de mols",
+            "variaveis": {
+                "n": "Número de mols",
+                "m": "massa do gás",
+                "M": "massa molar do gás"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "Q = \\Delta U + \\tau",
+            "nome": "Primeira Lei da Termodinâmica",
+            "variaveis": {
+                "Q": "calor trocado pelo sistema (J)",
+                "\\Delta U": "variação da energia interna do sistema (J)",
+                "\\tau": "trabalho realizado pelo sistema (J)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "η = 1-|Q_R|/|Q_A| ",
+            "nome": "Rendimento de uma máquina térmica",
+            "variaveis": {
+                "η": "rendimento",
+                "Q_A": "calor de aquecimento da máquina",
+                "Q_R": "calor no resfriamento da máquina"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "\\Delta S = Q/T",
+            "nome": "Variação da entropia",
+            "variaveis": {
+                "\\Delta S": "variação da entropia (J/K)",
+                "Q": "calor trocado (J)",
+                "T": "temperatura absoluta (K)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "U = 3/2 n \\cdot  R\\cdot  T",
+            "nome": "Energia Interna em função da Temperatura",
+            "variaveis": {
+                "U": "energia interna",
+                "n": "número de mols",
+                "R": "constante universal dos gases",
+                "T": "temperatura"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "U=3/2 P\\cdot  V",
+            "nome": "Energia Interna ",
+            "variaveis": {
+                "U": "energia interna",
+                "P": "Pressão",
+                "V": "Volume"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "\\tau = n\\cdot  R\\cdot  T\\cdot  ln(V2/V1)",
+            "nome": "Trabalho de um gás sob temperatura constante",
+            "variaveis": {
+                "\\tau": "Trabalho",
+                "n": "Número de mols",
+                "R": "constante universal dos gases",
+                "T": "temperatura",
+                "V1": "Volume inicial",
+                "V2": "Volume final"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "\\tau = 0",
+            "nome": "Trabalho de um gás sob volume constante",
+            "variaveis": {
+                "\\tau": "trabalho"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "|\\tau|=|\\Delta U|",
+            "nome": "Trabalho de um gás em uma transformação adiabática",
+            "variaveis": {
+                "\\tau": "Trabalho",
+                "\\Delta U": "Variação da energia interna"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Dilatação",
+            "formula": "\\Delta L = \\alpha  \\cdot L₀\\cdot \\Delta T",
+            "nome": "Dilatação linear de sólidos",
+            "variaveis": {
+                "\\Delta L": "variação do comprimento (m)",
+                "\\alpha  ": "coeficiente de dilatação linear (°C⁻¹)",
+                "L₀": "comprimento inicial (m)",
+                "\\Delta T": "variação de temperatura (°C)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Dilatação",
+            "formula": "\\Delta V = \\gamma\\cdot V₀\\cdot \\Delta T",
+            "nome": "Dilatação volumétrica de sólidos e líquidos",
+            "variaveis": {
+                "\\Delta V": "variação do volume (m³)",
+                "\\gamma": "coeficiente de dilatação volumétrica (°C⁻¹)",
+                "V₀": "volume inicial (m³)",
+                "\\Delta T": "variação de temperatura (°C)"
+            }
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Dilatação",
+            "formula": "\\Delta A = 2\\cdot \\alpha  \\cdot A₀\\cdot \\Delta T",
+            "nome": "Dilatação superficial de sólidos",
+            "variaveis": {
+                "\\Delta A": "variação da área (m²)",
+                "\\alpha  ": "coeficiente de dilatação linear (°C⁻¹)",
+                "A₀": "área inicial (m²)",
+                "\\Delta T": "variação de temperatura (°C)"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "1/f = 1/p + 1/p'",
+            "nome": "Equação de Gauss",
+            "variaveis": {
+                "f": "distância focal (m)",
+                "p": "distância do objeto ao espelho/lente (m)",
+                "p'": "distância da imagem ao espelho/lente (m)"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "i = -p'/p",
+            "nome": "Ampliação linear transversal",
+            "variaveis": {
+                "i": "aumento linear",
+                "p'": "distância da imagem ao espelho/lente (m)",
+                "p": "distância do objeto ao espelho/lente (m)"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n_1\\cdot \\sin(i) = n_2\\cdot \\sin(r)",
+            "nome": "Lei de Snell-Descartes (Refração)",
+            "variaveis": {
+                "n_1": "índice de refração do meio 1",
+                "i": "ângulo de incidência",
+                "n_2": "índice de refração do meio 2",
+                "r": "ângulo de refração"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n = c/v",
+            "nome": "Índice de refração absoluto",
+            "variaveis": {
+                "n": "índice de refração absoluto",
+                "c": "velocidade da luz no vácuo",
+                "v": "velocidade da luz no meio"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n₁₂ = n₂/n₁",
+            "nome": "Índice de refração relativo",
+            "variaveis": {
+                "n₁₂": "índice de refração relativo do meio 2 em relação ao meio 1",
+                "n₂": "índice de refração do meio 2",
+                "n₁": "índice de refração do meio 1"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n=360º/\\alpha",
+            "nome": "Associação de espelhos planos",
+            "variaveis": {
+                "n": "número de imagens",
+                "\\alpha": "angulo de abertura entre os espelhos"
+            }
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "A=f/f-D_0",
+            "nome": "Ampliação",
+            "variaveis": {
+                "A": "Ampliação",
+                "f": "Distância focal",
+                "D_0": "Distância do objeto"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "x = A\\cdot cos(\\omega   t + \\phi    )",
+            "nome": "Equação horária do MHS",
+            "variaveis": {
+                "x": "elongação (m)",
+                "A": "amplitude (m)",
+                "\\omega   ": "frequência angular (rad/s)",
+                "t": "tempo (s)",
+                "\\phi    ": "fase inicial (rad)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "v = -A \\omega \\cdot \\sin(\\omega t + \\phi)",
+            "nome": "Velocidade no MHS",
+            "variaveis": {
+                "v": "velocidade (m/s)",
+                "A": "amplitude (m)",
+                "\\omega   ": "frequência angular (rad/s)",
+                "t": "tempo (s)",
+                "\\phi    ": "fase inicial (rad)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "a = -A\\omega^{2} \\cdot \\cos(\\omega t + \\phi )",
+            "nome": "Aceleração no MHS",
+            "variaveis": {
+                "a": "aceleração (m/s²)",
+                "A": "amplitude (m)",
+                "\\omega   ": "frequência angular (rad/s)",
+                "t": "tempo (s)",
+                "\\phi    ": "fase inicial (rad)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "\\omega = 2 \\pi f",
+            "nome": "Relação entre frequência angular e frequência",
+            "variaveis": {
+                "\\omega   ": "frequência angular (rad/s)",
+                "f": "frequência (Hz)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "\\omega = \\sqrt{(k/m)}",
+            "nome": "Relação entre frequência angular, constante elástica e massa",
+            "variaveis": {
+                "\\omega   ": "frequência angular (rad/s)",
+                "k": "constante elástica (N/m)",
+                "m": "massa (kg)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "v = \\lambda \\cdot f",
+            "nome": "Relação entre velocidade, comprimento de onda e frequência",
+            "variaveis": {
+                "v": "velocidade da onda (m/s)",
+                "\\lambda": "comprimento de onda (m)",
+                "f": "frequência (Hz)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T = 1/f",
+            "nome": "Relação entre período e frequência",
+            "variaveis": {
+                "T": "período (s)",
+                "f": "frequência (Hz)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "y = A \\cdot \\sin(kx - \\omega t)",
+            "nome": "Equação de uma onda harmônica",
+            "variaveis": {
+                "y": "elongação (m)",
+                "A": "amplitude (m)",
+                "k": "número de onda (rad/m)",
+                "x": "posição (m)",
+                "\\omega": "frequência angular (rad/s)",
+                "t": "tempo (s)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "v = \\sqrt{(\\tau / \\mu)}",
+            "nome": "Velocidade de propagação de uma onda em uma corda",
+            "variaveis": {
+                "v": "velocidade da onda (m/s)",
+                "\\tau": "tensão na corda (N)",
+                "\\mu": "densidade linear da corda (kg/m)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T= \\Delta t/n",
+            "nome": "Período do movimento",
+            "variaveis": {
+                "\\Del t": "Variação do tempo",
+                "n": "Número de ciclos"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "F=-k \\cdot  x",
+            "nome": "Força de Hooke",
+            "variaveis": {
+                "F": "Força elastica",
+                "k": "constante elastica",
+                "x": "elongação"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "\\omega = \\sqrt{(k/m)}",
+            "nome": "Frequencia Angular",
+            "variaveis": {
+                "\\omega": "Frequencia angular",
+                "k": "constante de força do MHS",
+                "m": "massa"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T=2 \\pi \\cdot \\sqrt{(k/m)}",
+            "nome": "Período Oscilador massa-mola",
+            "variaveis": {
+                "T": "Período",
+                "k": "constante elastica da mola",
+                "m": "massa"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "F = - (mg/l)\\cdot  x",
+            "nome": "Força Pêndulo simples",
+            "variaveis": {
+                "F": "Força",
+                "m": "massa",
+                "g": "gravidade",
+                "l": "comprimento do fio",
+                "x": "elongação"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T=2 \\pi \\cdot \\sqrt{(l/g)}",
+            "nome": "Período Pêndulo simples",
+            "variaveis": {
+                "T": "Período",
+                "l": "comprimento do fio",
+                "g": "gravidade"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "v= \\lambda \\cdot   f",
+            "nome": "Velocidade de Propagação",
+            "variaveis": {
+                "v": "velocidade",
+                "\\lambda": "comprimento de onda",
+                "f": "frequencia"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "I = P/A",
+            "nome": "Intensidade sonora",
+            "variaveis": {
+                "I": "intensidade sonora (W/m²)",
+                "P": "potência sonora (W)",
+                "A": "área da superfície (m²)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "\\beta = 10 \\cdot log_{10}(I/I_0)",
+            "nome": "Nível de intensidade sonora (decibéis)",
+            "variaveis": {
+                "\\beta ": "nível de intensidade sonora (dB)",
+                "I": "intensidade sonora (W/m²)",
+                "I_0": "intensidade de referência (10⁻¹² W/m²)"
+            }
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "f = 2L / \\lambda",
+            "nome": "Frequência fundamental de uma corda vibrante fixa nas duas extremidades",
+            "variaveis": {
+                "f": "frequência fundamental (Hz)",
+                "L": "comprimento da corda (m)",
+                "\\lambda": "comprimento de onda fundamental (m)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "I = \\Delta Q / \\Delta t",
+            "nome": "Intensidade da corrente elétrica",
+            "variaveis": {
+                "I": "corrente elétrica (A)",
+                "\\Delta Q": "quantidade de carga que atravessa uma seção transversal (C)",
+                "\\Delta t": "intervalo de tempo (s)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "P = U \\cdot I",
+            "nome": "Potência elétrica",
+            "variaveis": {
+                "P": "potência elétrica (W)",
+                "U": "tensão elétrica (V)",
+                "I": "corrente elétrica (A)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "F = k \\cdot  (Q1 \\cdot  Q2)/d^{2}",
+            "nome": "Lei de Coulomb",
+            "variaveis": {
+                "F": "Força",
+                "k": "constante elétrica no vácuo",
+                "Q1 e Q2": "Cargas de interação",
+                "d": "Distância entre as cargas"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "Q = m \\cdot c \\cdot \\Delta T",
+            "nome": "Calor produzido por efeito Joule",
+            "variaveis": {
+                "Q": "quantidade de calor (J)",
+                "m": "massa (kg)",
+                "c": "calor específico (J/kg\\cdot K)",
+                "\\Delta T": "variação de temperatura (K)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "B = F/(q\\cdot v\\cdot \\sin(\\theta)    )",
+            "nome": "Campo magnético",
+            "variaveis": {
+                "B": "indução magnética (T)",
+                "F": "força magnética (N)",
+                "q": "carga elétrica (C)",
+                "v": "velocidade da carga (m/s)",
+                "\\theta": "ângulo entre a velocidade e o campo magnético"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "\\phi = B\\cdot A\\cdot \\cos\\theta    ",
+            "nome": "Fluxo magnético",
+            "variaveis": {
+                "\\phi": "fluxo magnético (Wb)",
+                "B": "indução magnética (T)",
+                "A": "área da superfície (m²)",
+                "\\theta": "ângulo entre o vetor campo magnético e o vetor normal à superfície"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "\\epsilon  = -\\Delta \\phi / \\Delta t",
+            "nome": "Lei de Faraday-Lenz",
+            "variaveis": {
+                "\\epsilon ": "força eletromotriz induzida (V)",
+                "\\Delta \\phi ": "variação do fluxo magnético (Wb)",
+                "\\Delta t": "intervalo de tempo (s)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "E = F/q",
+            "nome": "Campo elétrico",
+            "variaveis": {
+                "E": "campo elétrico (N/C)",
+                "F": "força elétrica (N)",
+                "q": "carga de prova (C)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "V = U/q",
+            "nome": "Potencial elétrico",
+            "variaveis": {
+                "V": "potencial elétrico (V)",
+                "U": "energia potencial elétrica (J)",
+                "q": "carga elétrica (C)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "C = Q/V",
+            "nome": "Capacitância",
+            "variaveis": {
+                "C": "capacitância (F)",
+                "Q": "carga elétrica armazenada (C)",
+                "V": "tensão elétrica (V)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletrodinamica",
+            "formula": "I = \\Delta Q/\\Delta t",
+            "nome": "Intensidade da corrente elétrica",
+            "variaveis": {
+                "I": "corrente elétrica (A)",
+                "\\Delta Q": "quantidade de carga que atravessa uma seção transversal (C)",
+                "\\Delta t": "intervalo de tempo (s)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletrodinamica",
+            "formula": "R = U/I",
+            "nome": "Lei de Ohm",
+            "variaveis": {
+                "R": "resistência elétrica (\\omega   )",
+                "U": "tensão elétrica (V)",
+                "I": "corrente elétrica (A)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletrodinamica",
+            "formula": "P = U\\cdot I",
+            "nome": "Potência elétrica",
+            "variaveis": {
+                "P": "potência elétrica (W)",
+                "U": "tensão elétrica (V)",
+                "I": "corrente elétrica (A)"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Indução Magnetica",
+            "formula": "B = F/(q\\cdot v\\cdot \\sin(\\theta) )",
+            "nome": "Campo magnético",
+            "variaveis": {
+                "B": "indução magnética (T)",
+                "F": "força magnética (N)",
+                "q": "carga elétrica (C)",
+                "v": "velocidade da carga (m/s)",
+                "\\theta": "ângulo entre a velocidade e o campo magnético"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Indução Magnetica",
+            "formula": "\\phi = B \\cdot A \\cdot \\cos(\\theta)",
+            "nome": "Fluxo magnético",
+            "variaveis": {
+                "\\phi": "fluxo magnético (Wb)",
+                "B": "indução magnética (T)",
+                "A": "área da superfície (m²)",
+                "\\theta": "ângulo entre o vetor campo magnético e o vetor normal à superfície"
+            }
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Indução Magnetica",
+            "formula": "\\epsilon  = -\\Delta \\phi /\\Delta t",
+            "nome": "Lei de Faraday-Lenz",
+            "variaveis": {
+                "\\epsilon ": "força eletromotriz induzida (V)",
+                "\\Delta \\phi": "variação do fluxo magnético (Wb)",
+                "\\Delta t": "intervalo de tempo (s)"
+            }
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Natureza Quântica",
+            "formula": "E = h\\cdot  f",
+            "nome": "Relação de Planck",
+            "variaveis": {
+                "E": "energia de um fóton (J)",
+                "h": "constante de Planck (6\\cdot 63x10^{-34} J\\cdot s)",
+                "f": "frequência da radiação (Hz)"
+            }
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Natureza Quântica",
+            "formula": "\\lambda = h/p",
+            "nome": "Hipótese de De Broglie",
+            "variaveis": {
+                "\\lambda": "comprimento de onda de uma partícula (m)",
+                "h": "constante de Planck (6\\cdot 63 x 10^{-34} J\\cdot s)",
+                "p": "momento linear da partícula (kg\\cdot m/s)"
+            }
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Natureza Quântica",
+            "formula": "\\Delta x\\cdot  \\Delta p ≥ h/4π",
+            "nome": "Princípio da incerteza de Heisenberg",
+            "variaveis": {
+                "\\Delta x": "incerteza na posição (m)",
+                "\\Delta p": "incerteza no momento linear (kg\\cdot m/s)",
+                "h": "constante de Planck (6\\cdot 63x10^{-34} J\\cdot s)"
+            }
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Teoria da Relatividade Restrita",
+            "formula": "E = mc²",
+            "nome": "Equivalência massa-energia",
+            "variaveis": {
+                "E": "energia (J)",
+                "m": "massa (kg)",
+                "c": "velocidade da luz no vácuo (m/s)"
+            }
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Teoria da Relatividade Restrita",
+            "formula": "\\Delta t' = \\gamma\\cdot \\Delta t",
+            "nome": "Dilatação do tempo",
+            "variaveis": {
+                "\\Delta t'": "intervalo de tempo medido por um observador em movimento em relação a um evento",
+                "\\Delta t": "intervalo de tempo medido por um observador em repouso em relação ao evento",
+                "\\gamma": "fator de Lorentz"
+            }
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Teoria da Relatividade Restrita",
+            "formula": "L' = L/\\gamma",
+            "nome": "Contração do comprimento",
+            "variaveis": {
+                "L'": "comprimento medido por um observador em movimento em relação a um objeto",
+                "L": "comprimento próprio do objeto",
+                "\\gamma": "fator de Lorentz"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Modelo Nuclear",
+            "formula": "E_b = [Zmp + (A-Z)mn - M]c²",
+            "nome": "Energia de ligação nuclear",
+            "variaveis": {
+                "E_b": "energia de ligação",
+                "Z": "número atômico",
+                "mp": "massa do próton",
+                "A": "número de massa",
+                "mn": "massa do nêutron",
+                "M": "massa do núcleo",
+                "c": "velocidade da luz"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Radioatividade",
+            "formula": "N(t) = N₀e^(-\\lambdat)",
+            "nome": "Lei de decaimento radioativo",
+            "variaveis": {
+                "N(t)": "número de núcleos no instante t",
+                "N₀": "número de núcleos no instante inicial",
+                "\\lambda": "constante de decaimento",
+                "t": "tempo"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Radioatividade",
+            "formula": "T_\frac{1}{2} = ln(2)/\\lambda",
+            "nome": "Tempo de meia-vida",
+            "variaveis": {
+                "T_\frac{1}{2}": "tempo de meia-vida",
+                "\\lambda": "constante de decaimento"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Reações Nucleares",
+            "formula": "Q = (M_reagentes - M_produtos)c²",
+            "nome": "Energia liberada em uma reação nuclear",
+            "variaveis": {
+                "Q": "energia liberada",
+                "M_reagentes": "massa dos reagentes",
+                "M_produtos": "massa dos produtos",
+                "c": "velocidade da luz"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Fissão Nuclear",
+            "formula": "E ≈ 200 MeV",
+            "nome": "Energia liberada em uma fissão nuclear típica",
+            "variaveis": {
+                "E": "energia liberada"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Fusão Nuclear",
+            "formula": "E ≈ 17 MeV",
+            "nome": "Energia liberada em uma fusão de deutério e trítio",
+            "variaveis": {
+                "E": "energia liberada"
+            }
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Força Nuclear",
+            "formula": "V(r) ≈ -V_{0}e^{-r/a}",
+            "nome": "Potencial da força nuclear",
+            "variaveis": {
+                "V(r)": "potencial nuclear",
+                "V₀": "profundidade do poço de potencial",
+                "r": "distância entre os núcleons",
+                "a": "alcance da força"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Postulados",
+            "formula": "\\psi(xt)",
+            "nome": "Função de onda",
+            "variaveis": {
+                "\\psi": "Função de onda",
+                "x": "posição",
+                "t": "tempo"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Postulados",
+            "formula": "iħ∂\\psi/∂t = Ĥ\\psi",
+            "nome": "Equação de Schrödinger dependente do tempo",
+            "variaveis": {
+                "i": "unidade imaginária",
+                "ħ": "constante de Planck reduzida",
+                "\\psi": "função de onda",
+                "Ĥ": "operador hamiltoniano"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Postulados",
+            "formula": "Ĥ\\psi = E\\psi",
+            "nome": "Equação de Schrödinger independente do tempo",
+            "variaveis": {
+                "Ĥ": "operador hamiltoniano",
+                "\\psi": "função de onda",
+                "E": "energia"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Operadores",
+            "formula": "p̂ = -iħ∂/∂x",
+            "nome": "Operador momento linear",
+            "variaveis": {
+                "p̂": "operador momento linear",
+                "ħ": "constante de Planck reduzida",
+                "x": "posição"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Operadores",
+            "formula": "x̂ = x",
+            "nome": "Operador posição",
+            "variaveis": {
+                "x̂": "operador posição",
+                "x": "posição"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Operadores",
+            "formula": "Ĥ = p̂²/2m + V(x)",
+            "nome": "Hamiltoniano para uma partícula",
+            "variaveis": {
+                "Ĥ": "hamiltoniano",
+                "p̂": "operador momento linear",
+                "m": "massa",
+                "V(x)": "potencial"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Princípio da Incerteza",
+            "formula": "\\Delta x\\Delta p ≥ ħ/2",
+            "nome": "Princípio da Incerteza de Heisenberg",
+            "variaveis": {
+                "\\Delta x": "incerteza na posição",
+                "\\Delta p": "incerteza no momento"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Átomo de Hidrogênio",
+            "formula": "\\psinlm(r, \\theta , \\phi)",
+            "nome": "Função de onda do átomo de hidrogênio",
+            "variaveis": {
+                "\\psi": "função de onda",
+                "(n, l, m)": "números quânticos",
+                "(r, \\theta , \\phi )": "coordenadas esféricas"
+            }
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Espectroscopia",
+            "formula": "E = hf",
+            "nome": "Relação de Planck",
+            "variaveis": {
+                "E": "energia",
+                "h": "constante de Planck",
+                "f": "frequência"
+            }
+        }
+    ]
+}

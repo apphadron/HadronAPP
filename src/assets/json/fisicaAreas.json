@@ -1,0 +1,385 @@
+{
+    "areas": [
+      {
+        "id": 1,
+        "nome": "Física Aplicada à Indústria",
+        "icon": "tool",
+        "cor": "#3498db",
+        "descricao": "Aplicação de princípios físicos para solucionar problemas industriais e desenvolver tecnologias de produção.",
+        "atuacao": "Indústrias de manufatura, automação, controle de qualidade e desenvolvimento de produtos.",
+        "exemplos": "Desenvolvimento de sensores industriais, otimização de processos produtivos, caracterização de materiais e controle de qualidade.",
+        "categoria": ["Indústria", "Tecnologia"]
+      },
+      {
+        "id": 2,
+        "nome": "Instrumentação Científica",
+        "icon": "sliders",
+        "cor": "#e74c3c",
+        "descricao": "Desenvolvimento, calibração e operação de instrumentos de medição e análise para pesquisa e aplicações tecnológicas.",
+        "atuacao": "Laboratórios de pesquisa, indústria de equipamentos científicos e centros de metrologia.",
+        "exemplos": "Microscópios avançados, espectrômetros, equipamentos de análise de materiais e sistemas de aquisição de dados.",
+        "categoria": ["Pesquisa", "Tecnologia"]
+      },
+      {
+        "id": 3,
+        "nome": "Física Médica",
+        "icon": "activity",
+        "cor": "#16a085",
+        "descricao": "Aplicação da física no diagnóstico e tratamento médico, com foco em tecnologias de imagem e radiação.",
+        "atuacao": "Hospitais, clínicas, centros de radioterapia e empresas de equipamentos médicos.",
+        "exemplos": "Planejamento de tratamentos de radioterapia, controle de qualidade em equipamentos de diagnóstico, dosimetria e proteção radiológica.",
+        "categoria": ["Saúde", "Tecnologia"]
+      },
+      {
+        "id": 4,
+        "nome": "Pesquisa Científica",
+        "icon": "search",
+        "cor": "#9b59b6",
+        "descricao": "Investigação de fenômenos físicos fundamentais e aplicados em ambientes acadêmicos ou industriais.",
+        "atuacao": "Universidades, institutos de pesquisa, laboratórios nacionais e departamentos de P&D.",
+        "exemplos": "Pesquisa em novos materiais, fenômenos quânticos, astrofísica, física de partículas e energia alternativa.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 5,
+        "nome": "Ensino e Divulgação Científica",
+        "icon": "book-open",
+        "cor": "#27ae60",
+        "descricao": "Transmissão de conhecimentos físicos em diferentes níveis educacionais e para o público geral.",
+        "atuacao": "Escolas, universidades, museus de ciência, editoras e mídia especializada.",
+        "exemplos": "Docência em diferentes níveis, desenvolvimento de material didático, curadoria de exposições científicas e jornalismo científico.",
+        "categoria": ["Educação"]
+      },
+      {
+        "id": 6,
+        "nome": "Tecnologia da Informação",
+        "icon": "cpu",
+        "cor": "#2980b9",
+        "descricao": "Aplicação de métodos físico-matemáticos em problemas computacionais e desenvolvimento de tecnologias digitais.",
+        "atuacao": "Empresas de tecnologia, startups, fintechs e departamentos de TI em diversos setores.",
+        "exemplos": "Inteligência artificial, processamento de dados científicos, modelagem computacional e criptografia.",
+        "categoria": ["Tecnologia"]
+      },
+      {
+        "id": 7,
+        "nome": "Energia e Sustentabilidade",
+        "icon": "zap",
+        "cor": "#f39c12",
+        "descricao": "Desenvolvimento e otimização de sistemas energéticos com foco em eficiência e sustentabilidade.",
+        "atuacao": "Empresas de energia, concessionárias, consultorias ambientais e agências reguladoras.",
+        "exemplos": "Energia solar, eólica, nuclear, gerenciamento de redes elétricas, eficiência energética e armazenamento de energia.",
+        "categoria": ["Indústria", "Tecnologia"]
+      },
+      {
+        "id": 8,
+        "nome": "Geofísica e Ciências Ambientais",
+        "icon": "globe",
+        "cor": "#2ecc71",
+        "descricao": "Estudo físico da Terra e aplicações em questões ambientais e exploração de recursos naturais.",
+        "atuacao": "Empresas de petróleo e mineração, agências ambientais, institutos de meteorologia e oceanografia.",
+        "exemplos": "Prospecção geofísica, monitoramento ambiental, modelagem climática e prevenção de desastres naturais.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 9,
+        "nome": "Tecnologia Aeroespacial",
+        "icon": "navigation",
+        "cor": "#34495e",
+        "descricao": "Aplicação da física em sistemas e equipamentos para exploração atmosférica e espacial.",
+        "atuacao": "Agências espaciais, indústria aeronáutica, empresas de satélites e centros de pesquisa espacial.",
+        "exemplos": "Desenvolvimento de instrumentação espacial, análise de dados de satélites, sistemas de propulsão e materiais aeroespaciais.",
+        "categoria": ["Tecnologia", "Indústria"]
+      },
+      {
+        "id": 10,
+        "nome": "Ciência de Materiais",
+        "icon": "layers",
+        "cor": "#8e44ad",
+        "descricao": "Desenvolvimento, caracterização e aplicação de novos materiais com propriedades específicas.",
+        "atuacao": "Indústrias metalúrgicas, de polímeros, cerâmicas, empresas de nanotecnologia e laboratórios de materiais avançados.",
+        "exemplos": "Supercondutores, materiais nano-estruturados, biomateriais, materiais para energia e semicondutores.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 11,
+        "nome": "Metrologia e Controle de Qualidade",
+        "icon": "check-circle",
+        "cor": "#7f8c8d",
+        "descricao": "Estabelecimento e verificação de padrões de medida e procedimentos de garantia de qualidade.",
+        "atuacao": "Institutos de metrologia, laboratórios de calibração, indústrias e empresas certificadoras.",
+        "exemplos": "Calibração de instrumentos, desenvolvimento de normas técnicas, certificação de produtos e processos.",
+        "categoria": ["Indústria", "Tecnologia"]
+      },
+      {
+        "id": 12,
+        "nome": "Física Computacional",
+        "icon": "code",
+        "cor": "#3498db",
+        "descricao": "Uso de métodos computacionais para resolver problemas físicos complexos e simular sistemas físicos.",
+        "atuacao": "Centros de supercomputação, empresas de software científico e departamentos de P&D.",
+        "exemplos": "Simulações de dinâmica molecular, modelagem de fenômenos complexos, visualização científica e big data.",
+        "categoria": ["Tecnologia", "Pesquisa"]
+      },
+      {
+        "id": 13,
+        "nome": "Óptica e Fotônica",
+        "icon": "eye",
+        "cor": "#e67e22",
+        "descricao": "Desenvolvimento e aplicação de tecnologias baseadas em luz para comunicações, medicina e indústria.",
+        "atuacao": "Indústria de telecomunicações, fabricantes de equipamentos ópticos, laboratórios de pesquisa em fotônica.",
+        "exemplos": "Sistemas de comunicação por fibra óptica, lasers, sensores ópticos, processamento óptico de informação.",
+        "categoria": ["Tecnologia", "Saúde"]
+      },
+      {
+        "id": 14,
+        "nome": "Física Nuclear Aplicada",
+        "icon": "atom",
+        "cor": "#c0392b",
+        "descricao": "Aplicações pacíficas da física nuclear em energia, medicina, indústria e agricultura.",
+        "atuacao": "Usinas nucleares, centros de medicina nuclear, empresas de radiofármacos e agências de segurança nuclear.",
+        "exemplos": "Geração de energia nuclear, medicina nuclear, técnicas de irradiação, datação por radiocarbono e monitoramento radiológico.",
+        "categoria": ["Indústria", "Saúde"]
+      },
+      {
+        "id": 15,
+        "nome": "Biofísica e Física Médica",
+        "icon": "heart",
+        "cor": "#1abc9c",
+        "descricao": "Intersecção entre física e ciências biológicas, com aplicações em medicina e biotecnologia.",
+        "atuacao": "Hospitais, laboratórios de pesquisa biomédica, indústria farmacêutica e empresas de biotecnologia.",
+        "exemplos": "Análise de estrutura de proteínas, dispositivos médicos, biomecânica, imagem médica e dosimetria.",
+        "categoria": ["Saúde", "Pesquisa"]
+      },
+      {
+        "id": 16,
+        "nome": "Acústica e Vibrações",
+        "icon": "volume-2",
+        "cor": "#2c3e50",
+        "descricao": "Estudo e controle de ondas sonoras e vibrações em diversos contextos aplicados.",
+        "atuacao": "Indústria automobilística, construção civil, fabricantes de instrumentos musicais, estúdios e consultorias acústicas.",
+        "exemplos": "Controle de ruído, projeto acústico de ambientes, instrumentos musicais, ultrassom industrial e áudio profissional.",
+        "categoria": ["Indústria", "Tecnologia"]
+      },
+      {
+        "id": 17,
+        "nome": "Física Financeira",
+        "icon": "trending-up",
+        "cor": "#d35400",
+        "descricao": "Aplicação de modelos e métodos da física estatística e computacional a mercados financeiros.",
+        "atuacao": "Bancos de investimento, fintechs, seguradoras, gestoras de ativos e empresas de análise de risco.",
+        "exemplos": "Modelagem de mercados financeiros, gestão de riscos, algoritmos de trading, precificação de derivativos.",
+        "categoria": ["Tecnologia", "Indústria"]
+      },
+      {
+        "id": 18,
+        "nome": "Nanotecnologia",
+        "icon": "minimize-2",
+        "cor": "#9b59b6",
+        "descricao": "Desenvolvimento e aplicação de estruturas e dispositivos em escala nanométrica.",
+        "atuacao": "Empresas de nanotecnologia, laboratórios de pesquisa avançada e indústria de microeletrônica.",
+        "exemplos": "Nanoeletrônica, nanomateriais, nanomedicina, nanosensores e dispositivos quânticos.",
+        "categoria": ["Tecnologia", "Pesquisa"]
+      },
+      {
+        "id": 19,
+        "nome": "Tecnologias Quânticas",
+        "icon": "box",
+        "cor": "#8e44ad",
+        "descricao": "Desenvolvimento de tecnologias baseadas em fenômenos quânticos para computação, comunicação e sensoriamento.",
+        "atuacao": "Empresas de alta tecnologia, laboratórios de pesquisa avançada e startups de tecnologia quântica.",
+        "exemplos": "Computação quântica, criptografia quântica, sensores quânticos e comunicação quântica.",
+        "categoria": ["Tecnologia", "Pesquisa"]
+      },
+      {
+        "id": 20,
+        "nome": "Consultoria Científica",
+        "icon": "briefcase",
+        "cor": "#7f8c8d",
+        "descricao": "Assessoria especializada em problemas que exigem conhecimento físico avançado e interdisciplinar.",
+        "atuacao": "Empresas de consultoria, agências governamentais, escritórios de propriedade intelectual e seguradoras.",
+        "exemplos": "Análise de viabilidade técnica, perícia técnica, patentes, avaliação de impacto tecnológico e gestão de inovação.",
+        "categoria": ["Indústria", "Tecnologia"]
+      },
+      {
+        "id": 21,
+        "nome": "Física Teórica",
+        "icon": "atom",
+        "cor": "#8e44ad",
+        "descricao": "Desenvolvimento de teorias e modelos para explicar fenômenos naturais.",
+        "atuacao": "Universidades, institutos de pesquisa, laboratórios teóricos.",
+        "exemplos": "Mecânica quântica, relatividade, teoria de campos, cosmologia.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 22,
+        "nome": "Física Experimental",
+        "icon": "flask",
+        "cor": "#3498db",
+        "descricao": "Realização de experimentos para testar teorias e descobrir novos fenômenos.",
+        "atuacao": "Laboratórios de pesquisa, aceleradores de partículas, institutos de física experimental.",
+        "exemplos": "Física de partículas, física nuclear, óptica experimental.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 23,
+        "nome": "Astrofísica e Cosmologia",
+        "icon": "star",
+        "cor": "#9b59b6",
+        "descricao": "Estudo de estrelas, galáxias, buracos negros e a estrutura do universo.",
+        "atuacao": "Observatórios, institutos de astrofísica, agências espaciais.",
+        "exemplos": "Cosmologia, matéria escura, energia escura, origem do universo.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 24,
+        "nome": "Física de Partículas",
+        "icon": "atom",
+        "cor": "#c0392b",
+        "descricao": "Investigação das partículas fundamentais e suas interações.",
+        "atuacao": "Aceleradores de partículas, laboratórios de física de alta energia.",
+        "exemplos": "LHC, física de neutrinos, teoria das cordas.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 25,
+        "nome": "Física Atômica e Molecular",
+        "icon": "atom",
+        "cor": "#16a085",
+        "descricao": "Estudo de átomos, moléculas e suas interações com a luz e outros campos.",
+        "atuacao": "Laboratórios de pesquisa, universidades, indústria de lasers.",
+        "exemplos": "Espectroscopia, lasers, resfriamento de átomos.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 26,
+        "nome": "Física da Matéria Condensada",
+        "icon": "layers",
+        "cor": "#2ecc71",
+        "descricao": "Pesquisa em sólidos, líquidos e outros estados da matéria.",
+        "atuacao": "Laboratórios de pesquisa, indústria de materiais.",
+        "exemplos": "Supercondutores, materiais magnéticos, nanomateriais.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 27,
+        "nome": "Física do Plasma",
+        "icon": "zap",
+        "cor": "#f39c12",
+        "descricao": "Estudo do quarto estado da matéria, com aplicações em fusão nuclear e astrofísica.",
+        "atuacao": "Laboratórios de pesquisa, usinas de fusão nuclear.",
+        "exemplos": "Fusão nuclear, plasmas astrofísicos, plasmas industriais.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 28,
+        "nome": "Física Matemática",
+        "icon": "code",
+        "cor": "#3498db",
+        "descricao": "Desenvolvimento de ferramentas matemáticas para resolver problemas físicos.",
+        "atuacao": "Universidades, institutos de pesquisa.",
+        "exemplos": "Teoria de campos, equações diferenciais, sistemas dinâmicos.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 29,
+        "nome": "Física Estatística e Termodinâmica",
+        "icon": "thermometer",
+        "cor": "#e74c3c",
+        "descricao": "Estudo de sistemas com muitos corpos e suas propriedades macroscópicas.",
+        "atuacao": "Universidades, laboratórios de pesquisa.",
+        "exemplos": "Termodinâmica, teoria de transições de fase, sistemas complexos.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 30,
+        "nome": "Física de Fluidos",
+        "icon": "droplet",
+        "cor": "#2980b9",
+        "descricao": "Estudo do comportamento de líquidos e gases, com aplicações em aerodinâmica e oceanografia.",
+        "atuacao": "Laboratórios de pesquisa, indústria aeronáutica, oceanografia.",
+        "exemplos": "Aerodinâmica, hidrodinâmica, turbulência.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 31,
+        "nome": "Física de Sistemas Complexos",
+        "icon": "network",
+        "cor": "#9b59b6",
+        "descricao": "Estudo de sistemas com interações não-lineares, como redes neurais e ecossistemas.",
+        "atuacao": "Universidades, laboratórios de pesquisa.",
+        "exemplos": "Redes complexas, sistemas biológicos, ecossistemas.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 32,
+        "nome": "Física de Superfícies",
+        "icon": "layers",
+        "cor": "#8e44ad",
+        "descricao": "Estudo de propriedades físicas em interfaces entre materiais.",
+        "atuacao": "Laboratórios de pesquisa, indústria de materiais.",
+        "exemplos": "Catálise, nanotecnologia, materiais bidimensionais.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 33,
+        "nome": "Física de Sistemas Biológicos",
+        "icon": "activity",
+        "cor": "#1abc9c",
+        "descricao": "Estudo de processos físicos em organismos vivos.",
+        "atuacao": "Laboratórios de pesquisa biomédica, universidades.",
+        "exemplos": "Biomecânica, biofísica celular, sistemas biológicos complexos.",
+        "categoria": ["Saúde", "Pesquisa"]
+      },
+      {
+        "id": 34,
+        "nome": "Física Climática",
+        "icon": "cloud",
+        "cor": "#2ecc71",
+        "descricao": "Estudo de fenômenos climáticos e mudanças globais.",
+        "atuacao": "Institutos de meteorologia, agências ambientais.",
+        "exemplos": "Modelagem climática, mudanças climáticas, previsão do tempo.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 35,
+        "nome": "Física de Energias Renováveis",
+        "icon": "zap",
+        "cor": "#f39c12",
+        "descricao": "Pesquisa em energia solar, eólica e outras fontes sustentáveis.",
+        "atuacao": "Empresas de energia renovável, laboratórios de pesquisa.",
+        "exemplos": "Energia solar fotovoltaica, energia eólica, armazenamento de energia.",
+        "categoria": ["Indústria", "Tecnologia"]
+      },
+      {
+        "id": 36,
+        "nome": "Física de Materiais 2D",
+        "icon": "layers",
+        "cor": "#8e44ad",
+        "descricao": "Estudo de materiais como o grafeno e suas aplicações.",
+        "atuacao": "Laboratórios de pesquisa, indústria de materiais.",
+        "exemplos": "Grafeno, materiais bidimensionais, dispositivos eletrônicos.",
+        "categoria": ["Pesquisa", "Indústria"]
+      },
+      {
+        "id": 37,
+        "nome": "Física de Fenômenos Extremos",
+        "icon": "zap",
+        "cor": "#c0392b",
+        "descricao": "Estudo de condições extremas de temperatura, pressão e campos magnéticos.",
+        "atuacao": "Laboratórios de pesquisa, aceleradores de partículas.",
+        "exemplos": "Plasmas de alta energia, materiais sob pressão extrema.",
+        "categoria": ["Pesquisa"]
+      },
+      {
+        "id": 38,
+        "nome": "Física Forense",
+        "icon": "shield",
+        "cor": "#95a5a6",
+        "descricao": "Aplicação dos princípios físicos na análise de evidências e reconstrução de eventos para investigações forenses.",
+        "atuacao": "Institutos forenses, laboratórios de criminalística e consultorias em perícias técnicas.",
+        "exemplos": "Análise balística, determinação de trajetórias de projéteis e estudo de impactos em acidentes.",
+        "categoria": ["Pesquisa", "Tecnologia"]
+      }
+    ]
+  }
+  

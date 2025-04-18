@@ -1,0 +1,1608 @@
+{
+    "formulas": [
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "Vm = \\Delta S / \\Delta T",
+            "nome": "Velocidade Média",
+            "variaveis": {
+                "Vm": "velocidade média (m/s)",
+                "\\Delta S": "variação do espaço (m)",
+                "\\Delta T": "variação do tempo (s)"
+            },
+            "contexto": "A velocidade média é uma grandeza física que mede a rapidez com que um objeto percorre uma distância em um intervalo de tempo. Por exemplo, se um carro percorre 100 metros em 10 segundos, sua velocidade média é de 10 m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "am = \\Delta v / \\Delta t",
+            "nome": "Aceleração Média",
+            "variaveis": {
+                "am": "aceleração média (m/s^{2})",
+                "\\Delta v": "variação da velocidade (m/s)",
+                "\\Delta t": "variação do tempo (s)"
+            },
+            "contexto": "A aceleração média mede a variação da velocidade de um objeto em um intervalo de tempo. Por exemplo, se um carro aumenta sua velocidade de 0 para 20 m/s em 5 segundos, sua aceleração média é de 4 m/s²."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "S = S_{0} + v \\cdot t",
+            "nome": "Função Horária do Deslocamento",
+            "variaveis": {
+                "S": "posição final do móvel (m)",
+                "S_0": "posição inicial do móvel (m)",
+                "v": "velocidade do móvel (m/s)",
+                "t": "intervalo de tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a posição de um objeto em movimento retilíneo uniforme (MRU), onde a velocidade é constante. Por exemplo, se um carro parte do km 10 e se move a 60 km/h, após 2 horas estará no km 130."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "V = V_{0} + a \\cdot t",
+            "nome": "Velocidade",
+            "variaveis": {
+                "V": "velocidade final (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "a": "aceleração (m/s²)",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a velocidade de um objeto em movimento retilíneo uniformemente variado (MRUV), onde a aceleração é constante. Por exemplo, se um carro parte do repouso e acelera a 2 m/s², após 5 segundos sua velocidade será de 10 m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "S = S_0 + V_0\\cdot t + 1/2\\cdot a\\cdot t^{2}",
+            "nome": "Função Horária da Posição",
+            "variaveis": {
+                "S": "posição final (m)",
+                "S_0": "posição inicial (m)",
+                "V_0": "velocidade inicial (m/s)",
+                "a": "aceleração (m/s^{2})",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a posição de um objeto em MRUV, considerando a aceleração. Por exemplo, se um carro parte do km 10 com velocidade inicial de 20 m/s e aceleração de 2 m/s², após 3 segundos estará no km 79."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "v^{2} = V_0^{2} + 2\\cdot a\\cdot \\Delta S",
+            "nome": "Equação de Torricelli",
+            "variaveis": {
+                "v": "velocidade final (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "a": "aceleração (m/s^{2})",
+                "\\Delta S": "variação da posição (m)"
+            },
+            "contexto": "A equação de Torricelli relaciona a velocidade final de um objeto em MRUV com sua aceleração e o deslocamento percorrido, sem a necessidade de conhecer o tempo. Por exemplo, se um carro acelera de 10 m/s a 2 m/s² por 50 metros, sua velocidade final será de aproximadamente 14,14 m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "vx = V_0 \\cdot   cos(\\theta    )",
+            "nome": "Componente horizontal da velocidade",
+            "variaveis": {
+                "vx": "velocidade na direção horizontal (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)"
+            },
+            "contexto": "Esta fórmula descreve a componente horizontal da velocidade em um movimento de projétil. Por exemplo, se uma bola é lançada a 20 m/s com um ângulo de 30°, sua velocidade horizontal será de aproximadamente 17,32 m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "vy = V_0 \\cdot   sin(\\theta    ) - g \\cdot   t",
+            "nome": "Componente vertical da velocidade",
+            "variaveis": {
+                "vy": "velocidade na direção vertical (m/s)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)",
+                "g": "aceleração da gravidade (m/s^{2})",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a componente vertical da velocidade em um movimento de projétil, considerando a aceleração da gravidade. Por exemplo, se uma bola é lançada a 20 m/s com um ângulo de 30°, após 1 segundo sua velocidade vertical será de aproximadamente 0,1 m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "x = V_0 \\cdot   cos(\\theta    ) \\cdot   t",
+            "nome": "Função horária da posição horizontal",
+            "variaveis": {
+                "x": "posição na direção horizontal (m)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a posição horizontal de um projétil em função do tempo. Por exemplo, se uma bola é lançada a 20 m/s com um ângulo de 30°, após 2 segundos estará a aproximadamente 34,64 metros na horizontal."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "y = V_0 \\cdot   sin(\\theta    ) \\cdot   t - 1/2 \\cdot   g \\cdot   t^{2}",
+            "nome": "Função horária da posição vertical",
+            "variaveis": {
+                "y": "posição na direção vertical (m)",
+                "V_0": "velocidade inicial (m/s)",
+                "\\theta    ": "ângulo de lançamento (graus)",
+                "g": "aceleração da gravidade (m/s^{2})",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a posição vertical de um projétil em função do tempo, considerando a aceleração da gravidade. Por exemplo, se uma bola é lançada a 20 m/s com um ângulo de 30°, após 2 segundos estará a aproximadamente 10,2 metros na vertical."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\omega   m = \\Delta \\phi     / \\Delta t",
+            "nome": "Velocidade Angular Média",
+            "variaveis": {
+                "\\omega   m": "velocidade angular média (rad/s)",
+                "\\Delta \\phi    ": "deslocamento angular (rad)",
+                "\\Delta t": "intervalo de tempo (s)"
+            },
+            "contexto": "A velocidade angular média mede a variação do ângulo percorrido por um objeto em movimento circular em um intervalo de tempo. Por exemplo, se uma roda gira 2π radianos em 1 segundo, sua velocidade angular média é de 2π rad/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\phi = \\phi_{0} + \\omega_{0} \\cdot   t",
+            "nome": "Posição Angular",
+            "variaveis": {
+                "\\phi": "posição angular (rad)",
+                "\\phi_{0}": "posição angular inicial (rad)",
+                "\\omega_{0}": "velocidade angular inicial (rad/s)",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a posição angular de um objeto em movimento circular uniforme (MCU). Por exemplo, se uma roda parte de 0 radianos e gira a 2π rad/s, após 1 segundo estará em 2π radianos."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "v = R \\cdot \\omega",
+            "nome": "Velocidade Radial",
+            "variaveis": {
+                "v": "velocidade tangencial (m/s)",
+                "R": "raio da trajetória circular (m)",
+                "\\omega": "velocidade angular (rad/s)"
+            },
+            "contexto": "Esta fórmula relaciona a velocidade tangencial de um objeto em movimento circular com sua velocidade angular e o raio da trajetória. Por exemplo, se uma roda de 0,5 metros gira a 2π rad/s, a velocidade tangencial é de π m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "ac = v^{2} / R",
+            "nome": "Aceleração Centripeta",
+            "variaveis": {
+                "ac": "aceleração centrípeta (m/s^{2})",
+                "v": "velocidade tangencial (m/s)",
+                "R": "raio da trajetória circular (m)"
+            },
+            "contexto": "A aceleração centrípeta é a aceleração que mantém um objeto em movimento circular. Por exemplo, se um carro faz uma curva de 50 metros de raio a 10 m/s, sua aceleração centrípeta é de 2 m/s²."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\omega = \\omega_{0} + \\alpha   \\cdot   t",
+            "nome": "Velocidade Angular",
+            "variaveis": {
+                "\\omega": "velocidade angular (rad/s)",
+                "\\omega_{0}": "velocidade angular inicial (rad/s)",
+                "\\alpha": "aceleração angular (rad/s^{2})",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a velocidade angular de um objeto em movimento circular uniformemente variado (MCUV). Por exemplo, se uma roda parte do repouso e acelera a 2 rad/s², após 3 segundos sua velocidade angular será de 6 rad/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\phi = \\phi_{0} + \\omega_{0} \\cdot   t + 1/2 \\cdot   \\alpha \\cdot  t^{2}",
+            "nome": "Função horária da posição angula",
+            "variaveis": {
+                "\\phi": "posição angular (rad)",
+                "\\phi_{0}": "posição angular inicial (rad)",
+                "\\omega_{0}": "velocidade angular inicial (rad/s)",
+                "\\alpha": "aceleração angular (rad/s^{2})",
+                "t": "tempo (s)"
+            },
+            "contexto": "Esta fórmula descreve a posição angular de um objeto em MCUV, considerando a aceleração angular. Por exemplo, se uma roda parte de 0 radianos com velocidade angular inicial de 2 rad/s e aceleração de 1 rad/s², após 2 segundos estará em 6 radianos."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "\\alpha   = \\Delta \\omega  / \\Delta t",
+            "nome": "Aceleração Angular",
+            "variaveis": {
+                "\\alpha  ": "aceleração angular (rad/s^{2})",
+                "\\Delta \\omega   ": "variação da velocidade angular (rad/s)",
+                "\\Delta t": "variação do tempo (s)"
+            },
+            "contexto": "A aceleração angular mede a variação da velocidade angular de um objeto em movimento circular. Por exemplo, se uma roda aumenta sua velocidade angular de 2 rad/s para 6 rad/s em 2 segundos, sua aceleração angular é de 2 rad/s²."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Cinemática",
+            "formula": "at = R \\cdot   \\alpha  ",
+            "nome": "Aceleração Tangencial",
+            "variaveis": {
+                "at": "aceleração tangencial (m/s^{2})",
+                "R": "raio da trajetória circular (m)",
+                "\\alpha  ": "aceleração angular (rad/s^{2})"
+            },
+            "contexto": "A aceleração tangencial é a componente da aceleração que atua na direção tangencial à trajetória circular. Por exemplo, se uma roda de 0,5 metros tem aceleração angular de 2 rad/s², sua aceleração tangencial é de 1 m/s²."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "∑F = 0",
+            "nome": "Primeira Lei de Newton (Princípio da Inércia)",
+            "variaveis": {
+                "∑F": "Força resultante"
+            },
+            "contexto": "A primeira lei de Newton afirma que um objeto permanece em repouso ou em movimento retilíneo uniforme, a menos que uma força resultante atue sobre ele. Por exemplo, um livro em repouso sobre uma mesa permanece parado porque a força normal e a força peso se equilibram."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "∑F = m \\cdot   a",
+            "nome": "Segunda Lei de Newton (forma escalar)",
+            "variaveis": {
+                "∑F": "Força resultante",
+                "m": "massa",
+                "a": "aceleração"
+            },
+            "contexto": "A segunda lei de Newton relaciona a força resultante aplicada a um objeto com sua massa e aceleração. Por exemplo, se uma força de 10 N é aplicada a um objeto de 2 kg, sua aceleração será de 5 m/s²."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "∑F = m \\cdot   a",
+            "nome": "Segunda Lei de Newton (forma vetorial)",
+            "variaveis": {
+                "∑F": "Força resultante",
+                "m": "massa",
+                "a": "aceleração"
+            },
+            "contexto": "A segunda lei de Newton na forma vetorial considera a direção e o sentido da força e da aceleração. Por exemplo, se uma força de 10 N é aplicada para a direita em um objeto de 2 kg, sua aceleração será de 5 m/s² para a direita."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "P = m \\cdot   g",
+            "nome": "Peso de um corpo",
+            "variaveis": {
+                "P": "Peso",
+                "m": "massa",
+                "g": "aceleração da gravidade"
+            },
+            "contexto": "O peso de um corpo é a força gravitacional que atua sobre ele. Por exemplo, se um objeto tem massa de 10 kg e a aceleração da gravidade é de 9,8 m/s², seu peso é de 98 N."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "Fat ≤ μs \\cdot   N",
+            "nome": "Força de atrito estático",
+            "variaveis": {
+                "Fat": "Força de atrito estático",
+                "μs": "coeficiente de atrito estático",
+                "N": "força normal"
+            },
+            "contexto": "A força de atrito estático é a força que impede um objeto de se mover quando uma força é aplicada. Por exemplo, se um bloco de 10 kg está em repouso sobre uma superfície com coeficiente de atrito estático de 0,5, a força de atrito estático máxima é de 49 N."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "Fat = μd \\cdot   N",
+            "nome": "Força de atrito dinâmico",
+            "variaveis": {
+                "Fat": "Força de atrito dinâmico",
+                "μd": "coeficiente de atrito dinâmico",
+                "N": "força normal"
+            },
+            "contexto": "A força de atrito dinâmico é a força que atua sobre um objeto em movimento. Por exemplo, se um bloco de 10 kg desliza sobre uma superfície com coeficiente de atrito dinâmico de 0,3, a força de atrito dinâmico é de 29,4 N."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "F = -k \\cdot   x",
+            "nome": "Lei de Hooke",
+            "variaveis": {
+                "F": "Força elástica",
+                "k": "constante elástica",
+                "x": "deformação"
+            },
+            "contexto": "A lei de Hooke descreve a força elástica exercida por uma mola quando ela é deformada. Por exemplo, se uma mola com constante elástica de 100 N/m é esticada em 0,1 metros, a força elástica é de 10 N."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Dinâmica",
+            "formula": "Fc = m \\cdot   v² / r",
+            "nome": "Força centrípeta",
+            "variaveis": {
+                "Fc": "Força centrípeta",
+                "m": "massa",
+                "v": "velocidade",
+                "r": "raio"
+            },
+            "contexto": "A força centrípeta é a força que mantém um objeto em movimento circular. Por exemplo, se um carro de 1000 kg faz uma curva de 50 metros de raio a 10 m/s, a força centrípeta é de 2000 N."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "τ = F \\cdot   d \\cdot   cos(\\theta    )",
+            "nome": "Trabalho de uma força constante",
+            "variaveis": {
+                "τ": "Trabalho",
+                "F": "força",
+                "d": "deslocamento",
+                "\\theta    ": "ângulo entre F e d"
+            },
+            "contexto": "O trabalho realizado por uma força constante é o produto da força pelo deslocamento e pelo cosseno do ângulo entre eles. Por exemplo, se uma força de 10 N é aplicada a um objeto, deslocando-o em 5 metros com um ângulo de 60°, o trabalho realizado é de 25 J."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "P = τ / \\Delta t",
+            "nome": "Potência média",
+            "variaveis": {
+                "P": "Potência média",
+                "τ": "trabalho",
+                "\\Delta t": "intervalo de tempo"
+            },
+            "contexto": "A potência média é a taxa de realização de trabalho em um intervalo de tempo. Por exemplo, se um motor realiza um trabalho de 1000 J em 10 segundos, sua potência média é de 100 W."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "P = F \\cdot   v",
+            "nome": "Potência instantânea",
+            "variaveis": {
+                "P": "Potência instantânea",
+                "F": "força",
+                "v": "velocidade"
+            },
+            "contexto": "A potência instantânea é o produto da força pela velocidade instantânea. Por exemplo, se uma força de 10 N é aplicada a um objeto que se move a 5 m/s, a potência instantânea é de 50 W."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Ec = (1/2) \\cdot   m \\cdot   v²",
+            "nome": "Energia cinética",
+            "variaveis": {
+                "Ec": "Energia cinética",
+                "m": "massa",
+                "v": "velocidade"
+            },
+            "contexto": "A energia cinética é a energia associada ao movimento de um objeto. Por exemplo, se um carro de 1000 kg se move a 20 m/s, sua energia cinética é de 200.000 J."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Ep = m \\cdot   g \\cdot   h",
+            "nome": "Energia potencial gravitacional",
+            "variaveis": {
+                "Ep": "Energia potencial gravitacional",
+                "m": "massa",
+                "g": "aceleração da gravidade",
+                "h": "altura"
+            },
+            "contexto": "A energia potencial gravitacional é a energia associada à posição de um objeto em um campo gravitacional. Por exemplo, se um objeto de 10 kg está a 5 metros de altura, sua energia potencial gravitacional é de 490 J."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Eel = (1/2) \\cdot   k \\cdot   x²",
+            "nome": "Energia potencial elástica",
+            "variaveis": {
+                "Eel": "Energia potencial elástica",
+                "k": "constante elástica",
+                "x": "deformação"
+            },
+            "contexto": "A energia potencial elástica é a energia armazenada em uma mola deformada. Por exemplo, se uma mola com constante elástica de 100 N/m é comprimida em 0,1 metros, sua energia potencial elástica é de 0,5 J."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Trabalho e Energia",
+            "formula": "Em = Ec + Ep",
+            "nome": "Energia mecânica",
+            "variaveis": {
+                "Em": "Energia mecânica",
+                "Ec": "Energia cinética",
+                "Ep": "Energia potencial"
+            },
+            "contexto": "A energia mecânica é a soma da energia cinética e potencial de um sistema. Por exemplo, se um objeto tem energia cinética de 100 J e energia potencial de 50 J, sua energia mecânica é de 150 J."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Quantidade de Movimento",
+            "formula": "Q = m \\cdot   v",
+            "nome": "Quantidade de movimento",
+            "variaveis": {
+                "Q": "Quantidade de movimento",
+                "m": "massa",
+                "v": "velocidade"
+            },
+            "contexto": "A quantidade de movimento é o produto da massa de um objeto por sua velocidade. Por exemplo, se um carro de 1000 kg se move a 20 m/s, sua quantidade de movimento é de 20.000 kg·m/s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Quantidade de Movimento",
+            "formula": "I = F \\cdot   \\Delta t",
+            "nome": "Impulso",
+            "variaveis": {
+                "I": "Impulso",
+                "F": "força",
+                "\\Delta t": "intervalo de tempo"
+            },
+            "contexto": "O impulso é o produto da força pelo intervalo de tempo durante o qual ela atua. Por exemplo, se uma força de 10 N é aplicada por 5 segundos, o impulso é de 50 N·s."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "P = d\\cdot g\\cdot h",
+            "nome": "Pressão Hidroestatica",
+            "variaveis": {
+                "P": "pressão (Pa)",
+                "d": "densidade do fluido (kg/m³)",
+                "g": "aceleração da gravidade (m/s^{2})",
+                "h": "profundidade (m)"
+            },
+            "contexto": "A pressão hidrostática é a pressão exercida por um fluido em repouso devido à força da gravidade. Por exemplo, se a densidade da água é 1000 kg/m³ e a profundidade é 10 metros, a pressão hidrostática é de 98.000 Pa."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "E = d\\cdot V\\cdot g",
+            "nome": "Empuxo",
+            "variaveis": {
+                "E": "empuxo (N)",
+                "d": "densidade do fluido (kg/m³)",
+                "V": "volume do fluido deslocado (m³)",
+                "g": "aceleração da gravidade (m/s^{2})"
+            },
+            "contexto": "O empuxo é a força exercida por um fluido sobre um objeto imerso, igual ao peso do fluido deslocado. Por exemplo, se um objeto desloca 0,1 m³ de água, o empuxo é de 980 N."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "P = F/A",
+            "nome": "Pressão Superficial",
+            "variaveis": {
+                "P": "Pressão (Pa)",
+                "F": "Força (N)",
+                "A": "Area(m)"
+            },
+            "contexto": "A pressão superficial é a força aplicada por unidade de área. Por exemplo, se uma força de 100 N é aplicada sobre uma área de 0,1 m², a pressão é de 1000 Pa."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "D = m/V",
+            "nome": "Densidade",
+            "variaveis": {
+                "D": "Densidade",
+                "m": "massa",
+                "V": "Volume"
+            },
+            "contexto": "A densidade é a razão entre a massa e o volume de um objeto. Por exemplo, se um objeto tem massa de 10 kg e volume de 0,1 m³, sua densidade é de 100 kg/m³."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Hidroestatica",
+            "formula": "\\Delta P = d\\cdot  g\\cdot  \\Delta h",
+            "nome": "Teorema de Stevin",
+            "variaveis": {
+                "\\Delta P": "Variação da pressão",
+                "d": "densidade",
+                "g": "gravidade",
+                "\\Delta h": "variação da altura"
+            },
+            "contexto": "O teorema de Stevin relaciona a variação da pressão em um fluido com a densidade, a gravidade e a variação da altura. Por exemplo, se a densidade da água é 1000 kg/m³ e a variação da altura é 5 metros, a variação da pressão é de 49.000 Pa."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Calorimetria",
+            "formula": "C = Q/\\Delta \\theta = m \\cdot  c",
+            "nome": "Capacidade térmica",
+            "variaveis": {
+                "Q": "quantidade de calor",
+                "c": "calor especifico",
+                "m": "massa",
+                "\\Delta theta": "variação da temperatura"
+            },
+            "contexto": "A capacidade térmica é a quantidade de calor necessária para elevar a temperatura de um objeto em 1°C. Por exemplo, se um objeto de 1 kg precisa de 1000 J para elevar sua temperatura em 10°C, sua capacidade térmica é de 100 J/°C."
+        },
+        {
+            "Area": "Mecânica",
+            "subarea": "Calorimetria",
+            "formula": "\\Phi = Q/\\Delta t",
+            "nome": "Fluxo de Calor",
+            "variaveis": {
+                "Phi": "fluxo de calor",
+                "Q": "quantidade de calor",
+                "\\Delta t": "variação do tempo"
+            },
+            "contexto": "O fluxo de calor é a taxa de transferência de calor por unidade de tempo. Por exemplo, se 1000 J de calor são transferidos em 10 segundos, o fluxo de calor é de 100 W."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Calorimetria",
+            "formula": "Q = m \\cdot c \\cdot \\Delta T",
+            "nome": "Calor Sensivel",
+            "variaveis": {
+                "Q": "quantidade de calor (J)",
+                "m": "massa da substância (kg)",
+                "c": "calor específico da substância (J/kg\\cdot K)",
+                "\\Delta T": "variação de temperatura (K)"
+            },
+            "contexto": "O calor sensível é a quantidade de calor necessária para alterar a temperatura de uma substância sem mudar seu estado físico. Por exemplo, se 1 kg de água precisa de 4186 J para elevar sua temperatura em 1°C, o calor sensível é de 4186 J."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Calorimetria",
+            "formula": "Q = m\\cdot L",
+            "nome": "Calor Latente",
+            "variaveis": {
+                "Q": "quantidade de calor (J)",
+                "m": "massa da substância (kg)",
+                "L": "calor latente da substância (J/kg)"
+            },
+            "contexto": "O calor latente é a quantidade de calor necessária para mudar o estado físico de uma substância sem alterar sua temperatura. Por exemplo, se 1 kg de água precisa de 334.000 J para derreter, o calor latente é de 334.000 J/kg."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P\\cdot V = n\\cdot R\\cdot T",
+            "nome": "Lei dos gases ideais",
+            "variaveis": {
+                "P": "pressão (Pa)",
+                "V": "volume (m^{3})",
+                "n": "número de mols",
+                "R": "constante universal dos gases (8\\cdot 31 J/mol\\cdot K)",
+                "T": "temperatura absoluta (K)"
+            },
+            "contexto": "A lei dos gases ideais relaciona a pressão, o volume, a temperatura e o número de mols de um gás ideal. Por exemplo, se 1 mol de gás está a 300 K e ocupa 0,025 m³, a pressão é de aproximadamente 99.720 Pa."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P₁\\cdot V₁/T₁ = P₂\\cdot V₂/T₂",
+            "nome": "Lei geral dos gases",
+            "variaveis": {
+                "P1": "Pressão inicial",
+                "V1": "Volume inicial",
+                "T1": "temperatura inicial",
+                "P2": "Pressão final",
+                "V2": "Volume final",
+                "T2": "temperatura final"
+            },
+            "contexto": "A lei geral dos gases relaciona as condições iniciais e finais de um gás em uma transformação. Por exemplo, se um gás tem pressão inicial de 100.000 Pa, volume inicial de 0,01 m³ e temperatura inicial de 300 K, e é comprimido para 0,005 m³ a 400 K, a pressão final será de 266.667 Pa."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P\\cdot V = constante (T constante)",
+            "nome": "Lei de Boyle",
+            "variaveis": {
+                "P": "pressão",
+                "V": "volume",
+                "T": "temperatura constante"
+            },
+            "contexto": "A lei de Boyle afirma que, para uma massa fixa de gás a temperatura constante, a pressão é inversamente proporcional ao volume. Por exemplo, se o volume de um gás é reduzido à metade, a pressão dobra."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "V/T = constante (P constante)",
+            "nome": "Lei de Charles",
+            "variaveis": {
+                "V": "volume",
+                "T": "temperatura",
+                "P": "pressão constante"
+            },
+            "contexto": "A lei de Charles afirma que, para uma massa fixa de gás a pressão constante, o volume é diretamente proporcional à temperatura absoluta. Por exemplo, se a temperatura de um gás dobra, o volume também dobra."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P/T = constante (V constante)",
+            "nome": "Lei de Gay-Lussac",
+            "variaveis": {
+                "P": "pressão",
+                "T": "temperatura",
+                "V": "volume constante"
+            },
+            "contexto": "A lei de Gay-Lussac afirma que, para uma massa fixa de gás a volume constante, a pressão é diretamente proporcional à temperatura absoluta. Por exemplo, se a temperatura de um gás dobra, a pressão também dobra."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "V1/T1 = V2/T2",
+            "nome": "Transformação Isobárica",
+            "variaveis": {
+                "V": "volume",
+                "T": "temperatura"
+            },
+            "contexto": "Em uma transformação isobárica, o volume de um gás é diretamente proporcional à sua temperatura absoluta, desde que a pressão seja mantida constante. Por exemplo, se a temperatura de um gás dobra, o volume também dobra."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P1/T1 = P2/T2",
+            "nome": "Transformação Isométrica",
+            "variaveis": {
+                "P": "Pressão",
+                "T": "temperatura"
+            },
+            "contexto": "Em uma transformação isométrica, a pressão de um gás é diretamente proporcional à sua temperatura absoluta, desde que o volume seja mantido constante. Por exemplo, se a temperatura de um gás dobra, a pressão também dobra."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P1 \\cdot V1=P2 \\cdot V2",
+            "nome": "Transformação Isotérmica",
+            "variaveis": {
+                "P": "Pressão",
+                "V": "Volume"
+            },
+            "contexto": "Em uma transformação isotérmica, a pressão de um gás é inversamente proporcional ao seu volume, desde que a temperatura seja mantida constante. Por exemplo, se o volume de um gás é reduzido à metade, a pressão dobra."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "P1 \\cdot V1^{\\gamma} = P2 \\cdot V2^{\\gamma}",
+            "nome": "Transformação adiabática ",
+            "variaveis": {
+                "P": "Pressão",
+                "V": "Volume",
+                "\\gamma": "Coeficiente que depende da atomicidade do gás"
+            },
+            "contexto": "Em uma transformação adiabática, não há troca de calor com o ambiente, e a pressão e o volume de um gás estão relacionados por um expoente que depende da atomicidade do gás. Por exemplo, para um gás monoatômico, γ = 5/3."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "T1 \\cdot V1^{\\gamma} = T2 \\cdot V2^{\\gamma}",
+            "nome": "Transformação adiabática",
+            "variaveis": {
+                "T": "Temperatura",
+                "V": "Volume",
+                "\\gamma": "Coeficiente que depende da atomicidade do gás"
+            },
+            "contexto": "Em uma transformação adiabática, a temperatura e o volume de um gás estão relacionados por um expoente que depende da atomicidade do gás. Por exemplo, para um gás monoatômico, γ = 5/3."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Gases",
+            "formula": "n=n/M",
+            "nome": "Número de mols",
+            "variaveis": {
+                "n": "Número de mols",
+                "m": "massa do gás",
+                "M": "massa molar do gás"
+            },
+            "contexto": "O número de mols de um gás é a razão entre a massa do gás e sua massa molar. Por exemplo, se 32 g de oxigênio (O₂) têm massa molar de 32 g/mol, o número de mols é 1."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "Q = \\Delta U + \\tau",
+            "nome": "Primeira Lei da Termodinâmica",
+            "variaveis": {
+                "Q": "calor trocado pelo sistema (J)",
+                "\\Delta U": "variação da energia interna do sistema (J)",
+                "\\tau": "trabalho realizado pelo sistema (J)"
+            },
+            "contexto": "A primeira lei da termodinâmica afirma que a variação da energia interna de um sistema é igual ao calor trocado menos o trabalho realizado. Por exemplo, se um sistema recebe 100 J de calor e realiza 30 J de trabalho, sua energia interna aumenta em 70 J."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "η = 1-|Q_R|/|Q_A| ",
+            "nome": "Rendimento de uma máquina térmica",
+            "variaveis": {
+                "η": "rendimento",
+                "Q_A": "calor de aquecimento da máquina",
+                "Q_R": "calor no resfriamento da máquina"
+            },
+            "contexto": "O rendimento de uma máquina térmica é a razão entre o trabalho útil realizado e o calor absorvido. Por exemplo, se uma máquina absorve 1000 J de calor e rejeita 600 J, seu rendimento é de 40%."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "\\Delta S = Q/T",
+            "nome": "Variação da entropia",
+            "variaveis": {
+                "\\Delta S": "variação da entropia (J/K)",
+                "Q": "calor trocado (J)",
+                "T": "temperatura absoluta (K)"
+            },
+            "contexto": "A variação da entropia mede a desordem de um sistema. Por exemplo, se 1000 J de calor são transferidos a 300 K, a variação da entropia é de aproximadamente 3,33 J/K."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "U = 3/2 n \\cdot  R\\cdot  T",
+            "nome": "Energia Interna em função da Temperatura",
+            "variaveis": {
+                "U": "energia interna",
+                "n": "número de mols",
+                "R": "constante universal dos gases",
+                "T": "temperatura"
+            },
+            "contexto": "A energia interna de um gás ideal monoatômico é diretamente proporcional à temperatura absoluta. Por exemplo, se 1 mol de gás está a 300 K, sua energia interna é de aproximadamente 3.740 J."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "U=3/2 P\\cdot  V",
+            "nome": "Energia Interna ",
+            "variaveis": {
+                "U": "energia interna",
+                "P": "Pressão",
+                "V": "Volume"
+            },
+            "contexto": "A energia interna de um gás ideal monoatômico é diretamente proporcional ao produto da pressão pelo volume. Por exemplo, se a pressão é 100.000 Pa e o volume é 0,01 m³, a energia interna é de 1.500 J."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "\\tau = n\\cdot  R\\cdot  T\\cdot  ln(V2/V1)",
+            "nome": "Trabalho de um gás sob temperatura constante",
+            "variaveis": {
+                "\\tau": "Trabalho",
+                "n": "Número de mols",
+                "R": "constante universal dos gases",
+                "T": "temperatura",
+                "V1": "Volume inicial",
+                "V2": "Volume final"
+            },
+            "contexto": "O trabalho realizado por um gás em uma expansão isotérmica é proporcional ao logaritmo natural da razão entre os volumes final e inicial. Por exemplo, se 1 mol de gás se expande de 0,01 m³ para 0,02 m³ a 300 K, o trabalho é de aproximadamente 1.729 J."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "\\tau = 0",
+            "nome": "Trabalho de um gás sob volume constante",
+            "variaveis": {
+                "\\tau": "trabalho"
+            },
+            "contexto": "Em uma transformação isométrica, o volume do gás é constante, e portanto, o trabalho realizado é zero. Por exemplo, se um gás é aquecido sem mudar seu volume, o trabalho é zero."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Termodinamica",
+            "formula": "|\\tau|=|\\Delta U|",
+            "nome": "Trabalho de um gás em uma transformação adiabática",
+            "variaveis": {
+                "\\tau": "Trabalho",
+                "\\Delta U": "Variação da energia interna"
+            },
+            "contexto": "Em uma transformação adiabática, o trabalho realizado pelo gás é igual à variação da energia interna. Por exemplo, se a energia interna de um gás diminui em 500 J, o trabalho realizado é de 500 J."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Dilatação",
+            "formula": "\\Delta L = \\alpha  \\cdot L₀\\cdot \\Delta T",
+            "nome": "Dilatação linear de sólidos",
+            "variaveis": {
+                "\\Delta L": "variação do comprimento (m)",
+                "\\alpha  ": "coeficiente de dilatação linear (°C⁻¹)",
+                "L₀": "comprimento inicial (m)",
+                "\\Delta T": "variação de temperatura (°C)"
+            },
+            "contexto": "A dilatação linear de um sólido é proporcional ao seu comprimento inicial, ao coeficiente de dilatação linear e à variação de temperatura. Por exemplo, se uma barra de 1 metro de comprimento tem coeficiente de dilatação linear de 0,000012 °C⁻¹ e é aquecida em 100°C, sua dilatação é de 0,0012 metros."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Dilatação",
+            "formula": "\\Delta V = \\gamma\\cdot V₀\\cdot \\Delta T",
+            "nome": "Dilatação volumétrica de sólidos e líquidos",
+            "variaveis": {
+                "\\Delta V": "variação do volume (m³)",
+                "\\gamma": "coeficiente de dilatação volumétrica (°C⁻¹)",
+                "V₀": "volume inicial (m³)",
+                "\\Delta T": "variação de temperatura (°C)"
+            },
+            "contexto": "A dilatação volumétrica de um sólido ou líquido é proporcional ao seu volume inicial, ao coeficiente de dilatação volumétrica e à variação de temperatura. Por exemplo, se 1 litro de água é aquecido em 10°C, seu volume aumenta em aproximadamente 0,0021 litros."
+        },
+        {
+            "Area": "Termologia",
+            "subarea": "Dilatação",
+            "formula": "\\Delta A = 2\\cdot \\alpha  \\cdot A₀\\cdot \\Delta T",
+            "nome": "Dilatação superficial de sólidos",
+            "variaveis": {
+                "\\Delta A": "variação da área (m²)",
+                "\\alpha  ": "coeficiente de dilatação linear (°C⁻¹)",
+                "A₀": "área inicial (m²)",
+                "\\Delta T": "variação de temperatura (°C)"
+            },
+            "contexto": "A dilatação superficial de um sólido é proporcional à sua área inicial, ao coeficiente de dilatação linear e à variação de temperatura. Por exemplo, se uma placa de 1 m² tem coeficiente de dilatação linear de 0,000012 °C⁻¹ e é aquecida em 100°C, sua dilatação superficial é de 0,0024 m²."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "1/f = 1/p + 1/p'",
+            "nome": "Equação de Gauss",
+            "variaveis": {
+                "f": "distância focal (m)",
+                "p": "distância do objeto ao espelho/lente (m)",
+                "p'": "distância da imagem ao espelho/lente (m)"
+            },
+            "contexto": "A equação de Gauss relaciona a distância focal de uma lente ou espelho com as distâncias do objeto e da imagem. Por exemplo, se a distância focal de uma lente é 0,1 metros e o objeto está a 0,3 metros, a imagem estará a 0,15 metros."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "i = -p'/p",
+            "nome": "Ampliação linear transversal",
+            "variaveis": {
+                "i": "aumento linear",
+                "p'": "distância da imagem ao espelho/lente (m)",
+                "p": "distância do objeto ao espelho/lente (m)"
+            },
+            "contexto": "A ampliação linear transversal é a razão entre o tamanho da imagem e o tamanho do objeto. Por exemplo, se a imagem está a 0,15 metros e o objeto a 0,3 metros, a ampliação é de -0,5, indicando que a imagem é invertida e metade do tamanho do objeto."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n_1\\cdot \\sin(i) = n_2\\cdot \\sin(r)",
+            "nome": "Lei de Snell-Descartes (Refração)",
+            "variaveis": {
+                "n_1": "índice de refração do meio 1",
+                "i": "ângulo de incidência",
+                "n_2": "índice de refração do meio 2",
+                "r": "ângulo de refração"
+            },
+            "contexto": "A lei de Snell-Descartes descreve a refração da luz ao passar de um meio para outro. Por exemplo, se a luz passa do ar (n₁ = 1) para a água (n₂ = 1,33) com um ângulo de incidência de 30°, o ângulo de refração será de aproximadamente 22°."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n = c/v",
+            "nome": "Índice de refração absoluto",
+            "variaveis": {
+                "n": "índice de refração absoluto",
+                "c": "velocidade da luz no vácuo",
+                "v": "velocidade da luz no meio"
+            },
+            "contexto": "O índice de refração absoluto é a razão entre a velocidade da luz no vácuo e a velocidade da luz no meio. Por exemplo, se a velocidade da luz na água é 2,25 x 10⁸ m/s, o índice de refração da água é de aproximadamente 1,33."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n₁₂ = n₂/n₁",
+            "nome": "Índice de refração relativo",
+            "variaveis": {
+                "n₁₂": "índice de refração relativo do meio 2 em relação ao meio 1",
+                "n₂": "índice de refração do meio 2",
+                "n₁": "índice de refração do meio 1"
+            },
+            "contexto": "O índice de refração relativo é a razão entre os índices de refração de dois meios. Por exemplo, se o índice de refração do vidro é 1,5 e o do ar é 1, o índice de refração relativo do vidro em relação ao ar é 1,5."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "n=360º/\\alpha",
+            "nome": "Associação de espelhos planos",
+            "variaveis": {
+                "n": "número de imagens",
+                "\\alpha": "angulo de abertura entre os espelhos"
+            },
+            "contexto": "O número de imagens formadas por dois espelhos planos associados é dado pela razão entre 360° e o ângulo de abertura entre os espelhos. Por exemplo, se o ângulo entre os espelhos é 60°, o número de imagens formadas é 6."
+        },
+        {
+            "Area": "Óptica",
+            "subarea": "Geometrica",
+            "formula": "A=f/f-D_0",
+            "nome": "Ampliação",
+            "variaveis": {
+                "A": "Ampliação",
+                "f": "Distância focal",
+                "D_0": "Distância do objeto"
+            },
+            "contexto": "A ampliação de uma lente é a razão entre a distância focal e a diferença entre a distância focal e a distância do objeto. Por exemplo, se a distância focal é 0,1 metros e o objeto está a 0,3 metros, a ampliação é de -0,5."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "x = A\\cdot cos(\\omega   t + \\phi    )",
+            "nome": "Equação horária do MHS",
+            "variaveis": {
+                "x": "elongação (m)",
+                "A": "amplitude (m)",
+                "\\omega   ": "frequência angular (rad/s)",
+                "t": "tempo (s)",
+                "\\phi    ": "fase inicial (rad)"
+            },
+            "contexto": "A equação horária do movimento harmônico simples (MHS) descreve a posição de um objeto em função do tempo. Por exemplo, se a amplitude é 0,1 metros e a frequência angular é 2π rad/s, a posição em t = 1 segundo é de aproximadamente 0,1 metros."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "v = -A \\omega \\cdot \\sin(\\omega t + \\phi)",
+            "nome": "Velocidade no MHS",
+            "variaveis": {
+                "v": "velocidade (m/s)",
+                "A": "amplitude (m)",
+                "\\omega   ": "frequência angular (rad/s)",
+                "t": "tempo (s)",
+                "\\phi    ": "fase inicial (rad)"
+            },
+            "contexto": "A velocidade no MHS é a derivada da posição em relação ao tempo. Por exemplo, se a amplitude é 0,1 metros e a frequência angular é 2π rad/s, a velocidade em t = 1 segundo é de aproximadamente -0,628 m/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "a = -A\\omega^{2} \\cdot \\cos(\\omega t + \\phi )",
+            "nome": "Aceleração no MHS",
+            "variaveis": {
+                "a": "aceleração (m/s²)",
+                "A": "amplitude (m)",
+                "\\omega   ": "frequência angular (rad/s)",
+                "t": "tempo (s)",
+                "\\phi    ": "fase inicial (rad)"
+            },
+            "contexto": "A aceleração no MHS é a derivada da velocidade em relação ao tempo. Por exemplo, se a amplitude é 0,1 metros e a frequência angular é 2π rad/s, a aceleração em t = 1 segundo é de aproximadamente -3,95 m/s²."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "\\omega = 2 \\pi f",
+            "nome": "Relação entre frequência angular e frequência",
+            "variaveis": {
+                "\\omega   ": "frequência angular (rad/s)",
+                "f": "frequência (Hz)"
+            },
+            "contexto": "A frequência angular é proporcional à frequência do movimento. Por exemplo, se a frequência é 1 Hz, a frequência angular é de 2π rad/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "\\omega = \\sqrt{(k/m)}",
+            "nome": "Relação entre frequência angular, constante elástica e massa",
+            "variaveis": {
+                "\\omega   ": "frequência angular (rad/s)",
+                "k": "constante elástica (N/m)",
+                "m": "massa (kg)"
+            },
+            "contexto": "A frequência angular de um sistema massa-mola é determinada pela constante elástica da mola e pela massa do objeto. Por exemplo, se a constante elástica é 100 N/m e a massa é 1 kg, a frequência angular é de 10 rad/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "v = \\lambda \\cdot f",
+            "nome": "Relação entre velocidade, comprimento de onda e frequência",
+            "variaveis": {
+                "v": "velocidade da onda (m/s)",
+                "\\lambda": "comprimento de onda (m)",
+                "f": "frequência (Hz)"
+            },
+            "contexto": "A velocidade de uma onda é o produto do comprimento de onda pela frequência. Por exemplo, se o comprimento de onda é 2 metros e a frequência é 1 Hz, a velocidade da onda é de 2 m/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T = 1/f",
+            "nome": "Relação entre período e frequência",
+            "variaveis": {
+                "T": "período (s)",
+                "f": "frequência (Hz)"
+            },
+            "contexto": "O período de uma onda é o inverso da frequência. Por exemplo, se a frequência é 2 Hz, o período é de 0,5 segundos."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "y = A \\cdot \\sin(kx - \\omega t)",
+            "nome": "Equação de uma onda harmônica",
+            "variaveis": {
+                "y": "elongação (m)",
+                "A": "amplitude (m)",
+                "k": "número de onda (rad/m)",
+                "x": "posição (m)",
+                "\\omega": "frequência angular (rad/s)",
+                "t": "tempo (s)"
+            },
+            "contexto": "A equação de uma onda harmônica descreve a posição de um ponto em uma onda em função do tempo e da posição. Por exemplo, se a amplitude é 0,1 metros, o número de onda é 2π rad/m e a frequência angular é 2π rad/s, a posição em x = 1 metro e t = 1 segundo é de aproximadamente 0,1 metros."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "v = \\sqrt{(\\tau / \\mu)}",
+            "nome": "Velocidade de propagação de uma onda em uma corda",
+            "variaveis": {
+                "v": "velocidade da onda (m/s)",
+                "\\tau": "tensão na corda (N)",
+                "\\mu": "densidade linear da corda (kg/m)"
+            },
+            "contexto": "A velocidade de propagação de uma onda em uma corda é determinada pela tensão na corda e pela densidade linear da corda. Por exemplo, se a tensão é 100 N e a densidade linear é 0,1 kg/m, a velocidade da onda é de aproximadamente 31,62 m/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T= \\Delta t/n",
+            "nome": "Período do movimento",
+            "variaveis": {
+                "\\Del t": "Variação do tempo",
+                "n": "Número de ciclos"
+            },
+            "contexto": "O período de um movimento é a razão entre o intervalo de tempo e o número de ciclos completos. Por exemplo, se um objeto completa 10 ciclos em 5 segundos, o período é de 0,5 segundos."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "F=-k \\cdot  x",
+            "nome": "Força de Hooke",
+            "variaveis": {
+                "F": "Força elastica",
+                "k": "constante elastica",
+                "x": "elongação"
+            },
+            "contexto": "A força de Hooke é a força restauradora em um sistema massa-mola, proporcional à elongação da mola. Por exemplo, se a constante elástica é 100 N/m e a elongação é 0,1 metros, a força é de 10 N."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "\\omega = \\sqrt{(k/m)}",
+            "nome": "Frequencia Angular",
+            "variaveis": {
+                "\\omega": "Frequencia angular",
+                "k": "constante de força do MHS",
+                "m": "massa"
+            },
+            "contexto": "A frequência angular de um sistema massa-mola é determinada pela constante de força e pela massa. Por exemplo, se a constante de força é 100 N/m e a massa é 1 kg, a frequência angular é de 10 rad/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T=2 \\pi \\cdot \\sqrt{(k/m)}",
+            "nome": "Período Oscilador massa-mola",
+            "variaveis": {
+                "T": "Período",
+                "k": "constante elastica da mola",
+                "m": "massa"
+            },
+            "contexto": "O período de um oscilador massa-mola é proporcional à raiz quadrada da razão entre a massa e a constante elástica da mola. Por exemplo, se a constante elástica é 100 N/m e a massa é 1 kg, o período é de aproximadamente 0,628 segundos."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "F = - (mg/l)\\cdot  x",
+            "nome": "Força Pêndulo simples",
+            "variaveis": {
+                "F": "Força",
+                "m": "massa",
+                "g": "gravidade",
+                "l": "comprimento do fio",
+                "x": "elongação"
+            },
+            "contexto": "A força restauradora em um pêndulo simples é proporcional à massa, à gravidade e à elongação, e inversamente proporcional ao comprimento do fio. Por exemplo, se a massa é 1 kg, a gravidade é 9,8 m/s², o comprimento do fio é 1 metro e a elongação é 0,1 metros, a força é de aproximadamente 0,98 N."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "MHS",
+            "formula": "T=2 \\pi \\cdot \\sqrt{(l/g)}",
+            "nome": "Período Pêndulo simples",
+            "variaveis": {
+                "T": "Período",
+                "l": "comprimento do fio",
+                "g": "gravidade"
+            },
+            "contexto": "O período de um pêndulo simples é proporcional à raiz quadrada da razão entre o comprimento do fio e a gravidade. Por exemplo, se o comprimento do fio é 1 metro e a gravidade é 9,8 m/s², o período é de aproximadamente 2 segundos."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "v= \\lambda \\cdot   f",
+            "nome": "Velocidade de Propagação",
+            "variaveis": {
+                "v": "velocidade",
+                "\\lambda": "comprimento de onda",
+                "f": "frequencia"
+            },
+            "contexto": "A velocidade de propagação de uma onda é o produto do comprimento de onda pela frequência. Por exemplo, se o comprimento de onda é 2 metros e a frequência é 1 Hz, a velocidade da onda é de 2 m/s."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "I = P/A",
+            "nome": "Intensidade sonora",
+            "variaveis": {
+                "I": "intensidade sonora (W/m²)",
+                "P": "potência sonora (W)",
+                "A": "área da superfície (m²)"
+            },
+            "contexto": "A intensidade sonora é a razão entre a potência sonora e a área da superfície. Por exemplo, se a potência sonora é 10 W e a área é 2 m², a intensidade sonora é de 5 W/m²."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "\\beta = 10 \\cdot log_{10}(I/I_0)",
+            "nome": "Nível de intensidade sonora (decibéis)",
+            "variaveis": {
+                "\\beta ": "nível de intensidade sonora (dB)",
+                "I": "intensidade sonora (W/m²)",
+                "I_0": "intensidade de referência (10⁻¹² W/m²)"
+            },
+            "contexto": "O nível de intensidade sonora mede a intensidade do som em decibéis, comparando-a com uma intensidade de referência. Por exemplo, se a intensidade sonora é 10⁻⁶ W/m², o nível de intensidade sonora é de 60 dB."
+        },
+        {
+            "Area": "Ondulatória",
+            "subarea": "Ondas",
+            "formula": "f = 2L / \\lambda",
+            "nome": "Frequência fundamental de uma corda vibrante fixa nas duas extremidades",
+            "variaveis": {
+                "f": "frequência fundamental (Hz)",
+                "L": "comprimento da corda (m)",
+                "\\lambda": "comprimento de onda fundamental (m)"
+            },
+            "contexto": "A frequência fundamental de uma corda vibrante fixa nas duas extremidades é determinada pelo comprimento da corda e pelo comprimento de onda fundamental. Por exemplo, se o comprimento da corda é 1 metro e o comprimento de onda fundamental é 2 metros, a frequência fundamental é de 1 Hz."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "I = \\Delta Q / \\Delta t",
+            "nome": "Intensidade da corrente elétrica",
+            "variaveis": {
+                "I": "corrente elétrica (A)",
+                "\\Delta Q": "quantidade de carga que atravessa uma seção transversal (C)",
+                "\\Delta t": "intervalo de tempo (s)"
+            },
+            "contexto": "A intensidade da corrente elétrica é a razão entre a quantidade de carga que atravessa uma seção transversal e o intervalo de tempo. Por exemplo, se 10 C de carga atravessam uma seção em 2 segundos, a corrente é de 5 A."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "P = U \\cdot I",
+            "nome": "Potência elétrica",
+            "variaveis": {
+                "P": "potência elétrica (W)",
+                "U": "tensão elétrica (V)",
+                "I": "corrente elétrica (A)"
+            },
+            "contexto": "A potência elétrica é o produto da tensão pela corrente. Por exemplo, se a tensão é 10 V e a corrente é 2 A, a potência é de 20 W."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "F = k \\cdot  (Q1 \\cdot  Q2)/d^{2}",
+            "nome": "Lei de Coulomb",
+            "variaveis": {
+                "F": "Força",
+                "k": "constante elétrica no vácuo",
+                "Q1 e Q2": "Cargas de interação",
+                "d": "Distância entre as cargas"
+            },
+            "contexto": "A lei de Coulomb descreve a força elétrica entre duas cargas pontuais. Por exemplo, se duas cargas de 1 C estão a 1 metro de distância, a força elétrica é de aproximadamente 9 x 10⁹ N."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "Q = m \\cdot c \\cdot \\Delta T",
+            "nome": "Calor produzido por efeito Joule",
+            "variaveis": {
+                "Q": "quantidade de calor (J)",
+                "m": "massa (kg)",
+                "c": "calor específico (J/kg\\cdot K)",
+                "\\Delta T": "variação de temperatura (K)"
+            },
+            "contexto": "O calor produzido por efeito Joule é a quantidade de calor gerada pela passagem de corrente elétrica em um resistor. Por exemplo, se 1 kg de água é aquecido em 10°C, o calor produzido é de 41.860 J."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "B = F/(q\\cdot v\\cdot \\sin(\\theta)    )",
+            "nome": "Campo magnético",
+            "variaveis": {
+                "B": "indução magnética (T)",
+                "F": "força magnética (N)",
+                "q": "carga elétrica (C)",
+                "v": "velocidade da carga (m/s)",
+                "\\theta": "ângulo entre a velocidade e o campo magnético"
+            },
+            "contexto": "O campo magnético é a razão entre a força magnética e o produto da carga, velocidade e seno do ângulo entre a velocidade e o campo. Por exemplo, se a força magnética é 1 N, a carga é 1 C, a velocidade é 1 m/s e o ângulo é 90°, o campo magnético é de 1 T."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "\\phi = B\\cdot A\\cdot \\cos\\theta    ",
+            "nome": "Fluxo magnético",
+            "variaveis": {
+                "\\phi": "fluxo magnético (Wb)",
+                "B": "indução magnética (T)",
+                "A": "área da superfície (m²)",
+                "\\theta": "ângulo entre o vetor campo magnético e o vetor normal à superfície"
+            },
+            "contexto": "O fluxo magnético é o produto da indução magnética, da área da superfície e do cosseno do ângulo entre o campo magnético e a normal à superfície. Por exemplo, se a indução magnética é 1 T, a área é 1 m² e o ângulo é 0°, o fluxo magnético é de 1 Wb."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "\\epsilon  = -\\Delta \\phi / \\Delta t",
+            "nome": "Lei de Faraday-Lenz",
+            "variaveis": {
+                "\\epsilon ": "força eletromotriz induzida (V)",
+                "\\Delta \\phi ": "variação do fluxo magnético (Wb)",
+                "\\Delta t": "intervalo de tempo (s)"
+            },
+            "contexto": "A lei de Faraday-Lenz afirma que a força eletromotriz induzida é igual à taxa de variação do fluxo magnético. Por exemplo, se o fluxo magnético varia em 1 Wb em 1 segundo, a força eletromotriz induzida é de 1 V."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "E = F/q",
+            "nome": "Campo elétrico",
+            "variaveis": {
+                "E": "campo elétrico (N/C)",
+                "F": "força elétrica (N)",
+                "q": "carga de prova (C)"
+            },
+            "contexto": "O campo elétrico é a razão entre a força elétrica e a carga de prova. Por exemplo, se a força elétrica é 10 N e a carga de prova é 1 C, o campo elétrico é de 10 N/C."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "V = U/q",
+            "nome": "Potencial elétrico",
+            "variaveis": {
+                "V": "potencial elétrico (V)",
+                "U": "energia potencial elétrica (J)",
+                "q": "carga elétrica (C)"
+            },
+            "contexto": "O potencial elétrico é a razão entre a energia potencial elétrica e a carga elétrica. Por exemplo, se a energia potencial elétrica é 10 J e a carga elétrica é 1 C, o potencial elétrico é de 10 V."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletroestatica",
+            "formula": "C = Q/V",
+            "nome": "Capacitância",
+            "variaveis": {
+                "C": "capacitância (F)",
+                "Q": "carga elétrica armazenada (C)",
+                "V": "tensão elétrica (V)"
+            },
+            "contexto": "A capacitância é a razão entre a carga elétrica armazenada e a tensão elétrica. Por exemplo, se a carga armazenada é 10 C e a tensão é 5 V, a capacitância é de 2 F."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletrodinamica",
+            "formula": "I = \\Delta Q/\\Delta t",
+            "nome": "Intensidade da corrente elétrica",
+            "variaveis": {
+                "I": "corrente elétrica (A)",
+                "\\Delta Q": "quantidade de carga que atravessa uma seção transversal (C)",
+                "\\Delta t": "intervalo de tempo (s)"
+            },
+            "contexto": "A intensidade da corrente elétrica é a razão entre a quantidade de carga que atravessa uma seção transversal e o intervalo de tempo. Por exemplo, se 10 C de carga atravessam uma seção em 2 segundos, a corrente é de 5 A."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletrodinamica",
+            "formula": "R = U/I",
+            "nome": "Lei de Ohm",
+            "variaveis": {
+                "R": "resistência elétrica (\\omega   )",
+                "U": "tensão elétrica (V)",
+                "I": "corrente elétrica (A)"
+            },
+            "contexto": "A lei de Ohm relaciona a tensão, a corrente e a resistência em um circuito elétrico. Por exemplo, se a tensão é 10 V e a corrente é 2 A, a resistência é de 5 Ω."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Eletrodinamica",
+            "formula": "P = U\\cdot I",
+            "nome": "Potência elétrica",
+            "variaveis": {
+                "P": "potência elétrica (W)",
+                "U": "tensão elétrica (V)",
+                "I": "corrente elétrica (A)"
+            },
+            "contexto": "A potência elétrica é o produto da tensão pela corrente. Por exemplo, se a tensão é 10 V e a corrente é 2 A, a potência é de 20 W."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Indução Magnetica",
+            "formula": "B = F/(q\\cdot v\\cdot \\sin(\\theta) )",
+            "nome": "Campo magnético",
+            "variaveis": {
+                "B": "indução magnética (T)",
+                "F": "força magnética (N)",
+                "q": "carga elétrica (C)",
+                "v": "velocidade da carga (m/s)",
+                "\\theta": "ângulo entre a velocidade e o campo magnético"
+            },
+            "contexto": "O campo magnético é a razão entre a força magnética e o produto da carga, velocidade e seno do ângulo entre a velocidade e o campo. Por exemplo, se a força magnética é 1 N, a carga é 1 C, a velocidade é 1 m/s e o ângulo é 90°, o campo magnético é de 1 T."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Indução Magnetica",
+            "formula": "\\phi = B \\cdot A \\cdot \\cos(\\theta)",
+            "nome": "Fluxo magnético",
+            "variaveis": {
+                "\\phi": "fluxo magnético (Wb)",
+                "B": "indução magnética (T)",
+                "A": "área da superfície (m²)",
+                "\\theta": "ângulo entre o vetor campo magnético e o vetor normal à superfície"
+            },
+            "contexto": "O fluxo magnético é o produto da indução magnética, da área da superfície e do cosseno do ângulo entre o campo magnético e a normal à superfície. Por exemplo, se a indução magnética é 1 T, a área é 1 m² e o ângulo é 0°, o fluxo magnético é de 1 Wb."
+        },
+        {
+            "Area": "Eletromagnetismo",
+            "subarea": "Indução Magnetica",
+            "formula": "\\epsilon  = -\\Delta \\phi /\\Delta t",
+            "nome": "Lei de Faraday-Lenz",
+            "variaveis": {
+                "\\epsilon ": "força eletromotriz induzida (V)",
+                "\\Delta \\phi": "variação do fluxo magnético (Wb)",
+                "\\Delta t": "intervalo de tempo (s)"
+            },
+            "contexto": "A lei de Faraday-Lenz afirma que a força eletromotriz induzida é igual à taxa de variação do fluxo magnético. Por exemplo, se o fluxo magnético varia em 1 Wb em 1 segundo, a força eletromotriz induzida é de 1 V."
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Natureza Quântica",
+            "formula": "E = h\\cdot  f",
+            "nome": "Relação de Planck",
+            "variaveis": {
+                "E": "energia de um fóton (J)",
+                "h": "constante de Planck (6 \\cdot 63x10^{-34} J \\cdot s)",
+                "f": "frequência da radiação (Hz)"
+            },
+            "contexto": "A relação de Planck descreve a energia de um fóton em função de sua frequência. Por exemplo, se a frequência da radiação é 1 Hz, a energia do fóton é de aproximadamente 6,63 x 10⁻³⁴ J."
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Natureza Quântica",
+            "formula": "\\lambda = h/p",
+            "nome": "Hipótese de De Broglie",
+            "variaveis": {
+                "\\lambda": "comprimento de onda de uma partícula (m)",
+                "h": "constante de Planck (6\\cdot 63 x 10^{-34} J\\cdot s)",
+                "p": "momento linear da partícula (kg\\cdot m/s)"
+            },
+            "contexto": "A hipótese de De Broglie relaciona o comprimento de onda de uma partícula com seu momento linear. Por exemplo, se o momento linear de uma partícula é 1 kg·m/s, o comprimento de onda é de aproximadamente 6,63 x 10⁻³⁴ metros."
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Natureza Quântica",
+            "formula": "\\Delta x\\cdot  \\Delta p ≥ h/4π",
+            "nome": "Princípio da incerteza de Heisenberg",
+            "variaveis": {
+                "\\Delta x": "incerteza na posição (m)",
+                "\\Delta p": "incerteza no momento linear (kg\\cdot m/s)",
+                "h": "constante de Planck (6\\cdot 63x10^{-34} J\\cdot s)"
+            },
+            "contexto": "O princípio da incerteza de Heisenberg afirma que é impossível medir simultaneamente a posição e o momento linear de uma partícula com precisão absoluta. Por exemplo, se a incerteza na posição é 1 metro, a incerteza no momento linear é de pelo menos 5,27 x 10⁻³⁵ kg·m/s."
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Teoria da Relatividade Restrita",
+            "formula": "E = mc²",
+            "nome": "Equivalência massa-energia",
+            "variaveis": {
+                "E": "energia (J)",
+                "m": "massa (kg)",
+                "c": "velocidade da luz no vácuo (m/s)"
+            },
+            "contexto": "A equivalência massa-energia é a relação entre a massa e a energia de um objeto, dada pela famosa equação de Einstein. Por exemplo, se a massa é 1 kg, a energia equivalente é de 9 x 10¹⁶ J."
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Teoria da Relatividade Restrita",
+            "formula": "\\Delta t' = \\gamma\\cdot \\Delta t",
+            "nome": "Dilatação do tempo",
+            "variaveis": {
+                "\\Delta t'": "intervalo de tempo medido por um observador em movimento em relação a um evento",
+                "\\Delta t": "intervalo de tempo medido por um observador em repouso em relação ao evento",
+                "\\gamma": "fator de Lorentz"
+            },
+            "contexto": "A dilatação do tempo é o fenômeno em que o tempo passa mais devagar para um observador em movimento em relação a um evento. Por exemplo, se o fator de Lorentz é 2, o tempo medido por um observador em movimento é o dobro do tempo medido por um observador em repouso."
+        },
+        {
+            "Area": "Física Moderna",
+            "subarea": "Teoria da Relatividade Restrita",
+            "formula": "L' = L/\\gamma",
+            "nome": "Contração do comprimento",
+            "variaveis": {
+                "L'": "comprimento medido por um observador em movimento em relação a um objeto",
+                "L": "comprimento próprio do objeto",
+                "\\gamma": "fator de Lorentz"
+            },
+            "contexto": "A contração do comprimento é o fenômeno em que o comprimento de um objeto medido por um observador em movimento é menor que o comprimento próprio do objeto. Por exemplo, se o fator de Lorentz é 2, o comprimento medido por um observador em movimento é a metade do comprimento próprio."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Modelo Nuclear",
+            "formula": "E_b = [Zmp + (A-Z)mn - M]c²",
+            "nome": "Energia de ligação nuclear",
+            "variaveis": {
+                "E_b": "energia de ligação",
+                "Z": "número atômico",
+                "mp": "massa do próton",
+                "A": "número de massa",
+                "mn": "massa do nêutron",
+                "M": "massa do núcleo",
+                "c": "velocidade da luz"
+            },
+            "contexto": "A energia de ligação nuclear é a energia necessária para separar os núcleons de um núcleo atômico. Por exemplo, se a massa do núcleo é menor que a soma das massas dos prótons e nêutrons, a energia de ligação é positiva."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Radioatividade",
+            "formula": "N(t) = N₀e^{- \\lambda \\cdot t}",
+            "nome": "Lei de decaimento radioativo",
+            "variaveis": {
+                "N(t)": "número de núcleos no instante t",
+                "N₀": "número de núcleos no instante inicial",
+                "\\lambda": "constante de decaimento",
+                "t": "tempo"
+            },
+            "contexto": "A lei de decaimento radioativo descreve o número de núcleos radioativos em função do tempo. Por exemplo, se a constante de decaimento é 0,01 s⁻¹ e o tempo é 100 segundos, o número de núcleos restantes é de aproximadamente 36,8% do número inicial."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Radioatividade",
+            "formula": "T_{\\frac{1}{2}} = ln(2)/\\lambda",
+            "nome": "Tempo de meia-vida",
+            "variaveis": {
+                "T_{\\frac{1}{2}} ": "tempo de meia-vida",
+                "\\lambda": "constante de decaimento"
+            },
+            "contexto": "O tempo de meia-vida é o tempo necessário para que a quantidade de núcleos radioativos seja reduzida à metade. Por exemplo, se a constante de decaimento é 0,01 s⁻¹, o tempo de meia-vida é de aproximadamente 69,3 segundos."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Reações Nucleares",
+            "formula": "Q = (M_{reagentes} - M_{produtos})c²",
+            "nome": "Energia liberada em uma reação nuclear",
+            "variaveis": {
+                "Q": "energia liberada",
+                "M_{reagentes}": "massa dos reagentes",
+                "M_{produtos}": "massa dos produtos",
+                "c": "velocidade da luz"
+            },
+            "contexto": "A energia liberada em uma reação nuclear é a diferença entre as massas dos reagentes e dos produtos, multiplicada pela velocidade da luz ao quadrado. Por exemplo, se a diferença de massa é 1 kg, a energia liberada é de 9 x 10¹⁶ J."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Fissão Nuclear",
+            "formula": "E ≈ 200 MeV",
+            "nome": "Energia liberada em uma fissão nuclear típica",
+            "variaveis": {
+                "E": "energia liberada"
+            },
+            "contexto": "A energia liberada em uma fissão nuclear típica é da ordem de 200 MeV. Por exemplo, a fissão de um núcleo de urânio-235 libera aproximadamente 200 MeV de energia."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Fusão Nuclear",
+            "formula": "E ≈ 17 MeV",
+            "nome": "Energia liberada em uma fusão de deutério e trítio",
+            "variaveis": {
+                "E": "energia liberada"
+            },
+            "contexto": "A energia liberada em uma fusão nuclear de deutério e trítio é da ordem de 17 MeV. Por exemplo, a fusão de um núcleo de deutério com um núcleo de trítio libera aproximadamente 17 MeV de energia."
+        },
+        {
+            "Area": "Física Nuclear",
+            "subarea": "Força Nuclear",
+            "formula": "V(r) ≈ -V_{0}e^{-r/a}",
+            "nome": "Potencial da força nuclear",
+            "variaveis": {
+                "V(r)": "potencial nuclear",
+                "V₀": "profundidade do poço de potencial",
+                "r": "distância entre os núcleons",
+                "a": "alcance da força"
+            },
+            "contexto": "O potencial da força nuclear descreve a interação entre os núcleons em um núcleo atômico. Por exemplo, se a profundidade do poço de potencial é 50 MeV e o alcance da força é 1 fm, o potencial a 2 fm é de aproximadamente 6,77 MeV."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Postulados",
+            "formula": "\\psi(xt)",
+            "nome": "Função de onda",
+            "variaveis": {
+                "\\psi": "Função de onda",
+                "x": "posição",
+                "t": "tempo"
+            },
+            "contexto": "A função de onda descreve o estado quântico de uma partícula em função da posição e do tempo. Por exemplo, a função de onda de uma partícula livre pode ser uma onda plana."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Postulados",
+            "formula": "iħ∂\\psi/∂t = Ĥ\\psi",
+            "nome": "Equação de Schrödinger dependente do tempo",
+            "variaveis": {
+                "i": "unidade imaginária",
+                "ħ": "constante de Planck reduzida",
+                "\\psi": "função de onda",
+                "Ĥ": "operador hamiltoniano"
+            },
+            "contexto": "A equação de Schrödinger dependente do tempo descreve a evolução temporal da função de onda de uma partícula. Por exemplo, para uma partícula livre, a solução é uma onda plana."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Postulados",
+            "formula": "Ĥ\\psi = E\\psi",
+            "nome": "Equação de Schrödinger independente do tempo",
+            "variaveis": {
+                "Ĥ": "operador hamiltoniano",
+                "\\psi": "função de onda",
+                "E": "energia"
+            },
+            "contexto": "A equação de Schrödinger independente do tempo descreve os estados estacionários de uma partícula. Por exemplo, para um poço de potencial infinito, as soluções são funções senoidais."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Operadores",
+            "formula": "p̂ = -iħ∂/∂x",
+            "nome": "Operador momento linear",
+            "variaveis": {
+                "p̂": "operador momento linear",
+                "ħ": "constante de Planck reduzida",
+                "x": "posição"
+            },
+            "contexto": "O operador momento linear é usado para calcular o momento de uma partícula na mecânica quântica. Por exemplo, o momento de uma partícula livre é dado por -iħ vezes a derivada da função de onda em relação à posição."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Operadores",
+            "formula": "x̂ = x",
+            "nome": "Operador posição",
+            "variaveis": {
+                "x̂": "operador posição",
+                "x": "posição"
+            },
+            "contexto": "O operador posição é usado para calcular a posição de uma partícula na mecânica quântica. Por exemplo, a posição de uma partícula é dada pela multiplicação da função de onda pela posição."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Operadores",
+            "formula": "Ĥ = p̂²/2m + V(x)",
+            "nome": "Hamiltoniano para uma partícula",
+            "variaveis": {
+                "Ĥ": "hamiltoniano",
+                "p̂": "operador momento linear",
+                "m": "massa",
+                "V(x)": "potencial"
+            },
+            "contexto": "O hamiltoniano para uma partícula é a soma da energia cinética e da energia potencial. Por exemplo, para uma partícula em um poço de potencial, o hamiltoniano inclui o termo de energia cinética e o potencial."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Princípio da Incerteza",
+            "formula": "\\Delta x\\Delta p ≥ ħ/2",
+            "nome": "Princípio da Incerteza de Heisenberg",
+            "variaveis": {
+                "\\Delta x": "incerteza na posição",
+                "\\Delta p": "incerteza no momento"
+            },
+            "contexto": "O princípio da incerteza de Heisenberg afirma que é impossível medir simultaneamente a posição e o momento de uma partícula com precisão absoluta. Por exemplo, se a incerteza na posição é 1 metro, a incerteza no momento é de pelo menos 5,27 x 10⁻³⁵ kg·m/s."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Átomo de Hidrogênio",
+            "formula": "\\psinlm(r, \\theta , \\phi)",
+            "nome": "Função de onda do átomo de hidrogênio",
+            "variaveis": {
+                "\\psi": "função de onda",
+                "(n, l, m)": "números quânticos",
+                "(r, \\theta , \\phi )": "coordenadas esféricas"
+            },
+            "contexto": "A função de onda do átomo de hidrogênio descreve os estados quânticos do elétron em função dos números quânticos e das coordenadas esféricas. Por exemplo, para n = 1, l = 0 e m = 0, a função de onda é esfericamente simétrica."
+        },
+        {
+            "Area": "Mecânica Quântica",
+            "subarea": "Espectroscopia",
+            "formula": "E = hf",
+            "nome": "Relação de Planck",
+            "variaveis": {
+                "E": "energia",
+                "h": "constante de Planck",
+                "f": "frequência"
+            },
+            "contexto": "A relação de Planck descreve a energia de um fóton em função de sua frequência. Por exemplo, se a frequência da radiação é 1 Hz, a energia do fóton é de aproximadamente 6,63 x 10⁻³⁴ J."
+        }
+    ]
+}

@@ -1,0 +1,254 @@
+[
+    {
+        "nome": "Massa Do Elétron",
+        "simbolo": null,
+        "valor": "9.1094e-31",
+        "incerteza": "2.8000e-38",
+        "unidade": "kg"
+    },
+    {
+        "nome": "Equivalente De Energia De Massa Do Elétron",
+        "simbolo": null,
+        "valor": "8.1871e-14",
+        "incerteza": "2.5000e-22",
+        "unidade": "J"
+    },
+    {
+        "nome": "Energia Equivalente Em Massa Do Elétron Em Mev",
+        "simbolo": null,
+        "valor": "5.1090e+02",
+        "incerteza": "1.6000e-05",
+        "unidade": "MeV"
+    },
+    {
+        "nome": "Massa Do Elétron Em Você",
+        "simbolo": null,
+        "valor": "5.4858e-04",
+        "incerteza": "1.6000e-10",
+        "unidade": "u"
+    },
+    {
+        "nome": "Massa Molar Do Elétron",
+        "simbolo": null,
+        "valor": "5.4858e-07",
+        "incerteza": "1.6000e-13",
+        "unidade": "kg mol^-1"
+    },
+    {
+        "nome": "Massa Do Nêutron",
+        "simbolo": null,
+        "valor": "1.6749e-27",
+        "incerteza": "4.6000e-35",
+        "unidade": "kg"
+    },
+    {
+        "nome": "Equivalente De Energia De Massa Do Nêutron",
+        "simbolo": null,
+        "valor": "1.5053e-10",
+        "incerteza": "4.5000e-19",
+        "unidade": "J"
+    },
+    {
+        "nome": "Energia Equivalente Em Massa Do Nêutron Em Mev",
+        "simbolo": null,
+        "valor": "9.3956e+02",
+        "incerteza": "2.8000e-05",
+        "unidade": "MeV"
+    },
+    {
+        "nome": "Massa Do Nêutron Em Você",
+        "simbolo": null,
+        "valor": "1.0086e+00",
+        "incerteza": "3.1000e-10",
+        "unidade": "u"
+    },
+    {
+        "nome": "Massa Molar Do Nêutron",
+        "simbolo": null,
+        "valor": "1.0086e-03",
+        "incerteza": "3.1000e-13",
+        "unidade": "kg mol^-1"
+    },
+    {
+        "nome": "Massa Do Tau",
+        "simbolo": null,
+        "valor": "3.1675e-27",
+        "incerteza": "1.9000e-35",
+        "unidade": "kg"
+    },
+    {
+        "nome": "Carga Do Elétron",
+        "simbolo": null,
+        "valor": "-1.6022e-19",
+        "incerteza": "4.0000e-27",
+        "unidade": "C"
+    },
+    {
+        "nome": "Carga Elementar",
+        "simbolo": null,
+        "valor": "1.6022e-19",
+        "incerteza": "4.0000e-27",
+        "unidade": "C"
+    },
+    {
+        "nome": "Massa De Uma Unidade Atômica",
+        "simbolo": null,
+        "valor": "1.6605e-27",
+        "incerteza": "1.0000e-36",
+        "unidade": "kg"
+    },
+    {
+        "nome": "Energia De Uma Unidade Atômica Em Mev",
+        "simbolo": null,
+        "valor": "9.3149e+02",
+        "incerteza": "2.8000e-05",
+        "unidade": "MeV"
+    },
+    {
+        "nome": "Massa Molar Da Unidade Atômica",
+        "simbolo": null,
+        "valor": "1.0000e-03",
+        "incerteza": "3.1000e-13",
+        "unidade": "kg mol^-1"
+    },
+    {
+        "nome": "Constante De Avogadro",
+        "simbolo": null,
+        "valor": "6.0221e+23",
+        "incerteza": "1.8000e+17",
+        "unidade": "mol^-1"
+    },
+    {
+        "nome": "Constante De Boltzmann",
+        "simbolo": null,
+        "valor": "1.3806e-23",
+        "incerteza": "2.0000e-30",
+        "unidade": "J K^-1"
+    },
+    {
+        "nome": "Constante De Faraday",
+        "simbolo": null,
+        "valor": "9.6485e+04",
+        "incerteza": "2.1000e-03",
+        "unidade": "C mol^-1"
+    },
+    {
+        "nome": "Constante De Planck",
+        "simbolo": null,
+        "valor": "6.6261e-34",
+        "incerteza": "2.7000e-41",
+        "unidade": "J s"
+    },
+    {
+        "nome": "Velocidade Da Luz No Vácuo",
+        "simbolo": null,
+        "valor": "2.9979e+08",
+        "incerteza": "0",
+        "unidade": "m s^-1"
+    },
+    {
+        "nome": "Permeabilidade Do Vácuo",
+        "simbolo": null,
+        "valor": "1.2566e-06",
+        "incerteza": "0",
+        "unidade": "N A^-2"
+    },
+    {
+        "nome": "Permissividade Do Vácuo",
+        "simbolo": null,
+        "valor": "8.8542e-12",
+        "incerteza": "2.0000e-20",
+        "unidade": "F m^-1"
+    },
+    {
+        "nome": "Pressão Atmosférica Normal",
+        "simbolo": null,
+        "valor": "1.0132e+05",
+        "incerteza": "4.0000e+01",
+        "unidade": "Pa"
+    },
+    {
+        "nome": "Constante De Gravitação Universal",
+        "simbolo": null,
+        "valor": "6.6743e-11",
+        "incerteza": "1.5000e-15",
+        "unidade": "m^3 kg^-1 s^-2"
+    },
+    {
+        "nome": "Constante Dos Gases Ideais",
+        "simbolo": null,
+        "valor": "8.3145e+00",
+        "incerteza": "7.9000e-03",
+        "unidade": "J mol^-1 K^-1"
+    },
+    {
+        "nome": "Constante De Coulomb",
+        "simbolo": null,
+        "valor": "8.9876e+09",
+        "incerteza": "3.6000e+05",
+        "unidade": "N m^2 C^-2"
+    },
+    {
+        "nome": "Constante De Stefan-Boltzmann",
+        "simbolo": null,
+        "valor": "5.6704e-08",
+        "incerteza": "5.0000e-13",
+        "unidade": "W m^-2 K^-4"
+    },
+    {
+        "nome": "Constante De Rydberg",
+        "simbolo": null,
+        "valor": "1.0974e+07",
+        "incerteza": "1.7000e-01",
+        "unidade": "m^-1"
+    },
+    {
+        "nome": "Volume Molar De Um Gás Ideal Em Stp",
+        "simbolo": null,
+        "valor": "2.2414e-02",
+        "incerteza": "0",
+        "unidade": "m^3 mol^-1"
+    },
+    {
+        "nome": "Temperatura De Fusão Do Ponto Triplo Da Água",
+        "simbolo": null,
+        "valor": "2.7316e+02",
+        "incerteza": "0",
+        "unidade": "K"
+    },
+    {
+        "nome": "Temperatura Do Ponto Triplo Da Água",
+        "simbolo": null,
+        "valor": "2.7316e+02",
+        "incerteza": "0",
+        "unidade": "K"
+    },
+    {
+        "nome": "Temperatura Ambiente Normal",
+        "simbolo": null,
+        "valor": "2.9831e+02",
+        "incerteza": "0",
+        "unidade": "K"
+    },
+    {
+        "nome": "Número De Loschmidt (Em Stp)",
+        "simbolo": null,
+        "valor": "2.6510e+25",
+        "incerteza": "0",
+        "unidade": "m^-3"
+    },
+    {
+        "nome": "Aceleração Da Gravidade Na Terra",
+        "simbolo": null,
+        "valor": "9.8067e+00",
+        "incerteza": "0",
+        "unidade": "m s^-2"
+    },
+    {
+        "nome": "Raio Médio Da Terra",
+        "simbolo": null,
+        "valor": "6.3710e+06",
+        "incerteza": "0",
+        "unidade": "m"
+    }
+]
