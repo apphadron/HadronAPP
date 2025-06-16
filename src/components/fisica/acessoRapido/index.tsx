@@ -35,7 +35,7 @@ export function AcessoRapido({
     if (onItemPress) {
       onItemPress(rota);
     } else {
-      router.push({ pathname: rota, params: { type: title } }); // Passa o título como parâmetro
+      router.push({ pathname: rota as any, params: { type: title } }); // Passa o título como parâmetro
     }
   }
 

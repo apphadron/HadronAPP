@@ -25,12 +25,21 @@ export default function LaboratorioScreen() {
   ];
 
   const calculadoras = [
+
+    {
+      id: 'estatistica',
+      title: 'Estatísticas',
+      icon: 'function-variant',
+      description: 'Calcule a propagação de erros em diferentes operações',
+      route: '/fisica/ferramentas/laboratorio/calculadoras/EstatisticasCalculadora',
+      color: '#F59E0B',
+    },
     {
       id: 'prop-erro',
       title: 'Propagação de Erro',
       icon: 'function-variant',
       description: 'Calcule a propagação de erros em diferentes operações',
-      route: '/fisica/ferramentas/laboratorio/calculadoras/Prop2',
+      route: '/fisica/ferramentas/laboratorio/calculadoras/PropagacaoErros',
       color: '#4F46E5',
     },
     {
@@ -56,14 +65,6 @@ export default function LaboratorioScreen() {
       description: 'Ajuste de curvas e regressão linear para dados experimentais',
       route: '/laboratorio/calculadoras/regressao-linear',
       color: '#EC4899',
-    },
-    {
-      id: 'calculadora-incerteza',
-      title: 'Incerteza Combinada',
-      icon: 'percent',
-      description: 'Calcule incertezas combinadas em medições',
-      route: '/laboratorio/calculadoras/incerteza-combinada',
-      color: '#F59E0B',
     },
     {
       id: 'algarismos-significativos',
@@ -124,7 +125,7 @@ export default function LaboratorioScreen() {
       title: 'Propagação de Erros',
       icon: 'function',
       description: 'Como os erros se propagam em diferentes operações',
-      route: '/laboratorio/teoria/propagacao-erros',
+      route: '/fisica/ferramentas/laboratorio/teoria/PropagacaoErros',
       color: '#8B5CF6',
     },
     {
@@ -132,7 +133,7 @@ export default function LaboratorioScreen() {
       title: 'Grandezas Físicas',
       icon: 'ruler',
       description: 'Conceitos fundamentais sobre grandezas físicas',
-      route: '/laboratorio/teoria/grandezas-fisicas',
+      route: '/fisica/ferramentas/laboratorio/teoria/GrandezasFisicas',
       color: '#10B981',
     },
     {
@@ -140,7 +141,7 @@ export default function LaboratorioScreen() {
       title: 'Método Científico',
       icon: 'flask',
       description: 'Etapas e aplicação do método científico',
-      route: '/laboratorio/teoria/metodo-cientifico',
+      route: '/fisica/ferramentas/laboratorio/teoria/MetodoCientifico',
       color: '#3B82F6',
     },
     {
@@ -148,7 +149,7 @@ export default function LaboratorioScreen() {
       title: 'Estatística Básica',
       icon: 'chart-bell-curve',
       description: 'Conceitos de estatística para análise de dados',
-      route: '/laboratorio/teoria/estatistica-basica',
+      route: '/fisica/ferramentas/laboratorio/teoria/EstatisticaBasica',
       color: '#F59E0B',
     },
     {
@@ -168,25 +169,10 @@ export default function LaboratorioScreen() {
       content: 'Sempre registre as unidades ao lado de cada medida realizada em laboratório',
       icon: 'lightbulb-outline',
       color: '#F59E0B'
-    },
-    {
-      id: 'fact1',
-      title: 'Você sabia?',
-      content: 'O Teorema do Limite Central explica por que muitos erros experimentais seguem a distribuição normal',
-      icon: 'brain',
-      color: '#8B5CF6'
-    },
-    {
-      id: 'tool1',
-      title: 'Ferramenta recente',
-      content: 'A calculadora de propagação de erros foi atualizada com novas funções',
-      icon: 'new-box',
-      color: '#10B981'
     }
   ];
 
   const renderCarouselItem = ({ item, index: itemIndex }: { item: any; index: number }) => {
-    // Interpolate for carousel effect
     const inputRange = [
       (itemIndex - 1) * (cardWidth + CARD_SPACING),
       itemIndex * (cardWidth + CARD_SPACING),
@@ -207,7 +193,12 @@ export default function LaboratorioScreen() {
 
     return (
       <TouchableOpacity
-        onPress={() => router.push(item.route)}
+        onPress={() =>  router.push({
+          pathname: item.route,
+          params: {
+            type: item.title
+          }
+        })}
         activeOpacity={0.9}
       >
         <Animated.View
@@ -259,16 +250,16 @@ export default function LaboratorioScreen() {
         {data.map((item: any) => (
           <TouchableOpacity
             key={item.id}
-            className="bg-white rounded-2xl mb-4 overflow-hidden"
+            className="bg-white rounded-2xl mb-4 overflow-hidden border border-gray-200"
             style={{
               width: width * 0.44,
-              shadowColor: '#000',
-              shadowOffset: { width: 0, height: 4 },
-              shadowOpacity: 0.1,
-              shadowRadius: 5,
-              elevation: 3
             }}
-            onPress={() => router.push(item.route)}
+            onPress={() =>  router.push({
+              pathname: item.route,
+              params: {
+                type: `Calculadoras de ${item.title}`
+              }
+            })}
           >
             <LinearGradient
               colors={[item.color, `${item.color}99`]}
@@ -360,10 +351,11 @@ export default function LaboratorioScreen() {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 40 }}
+        className='bg-white'
       >
         {/* Carousel destacado */}
         <View className="mt-6">
-          <Text style={{color: colors.default["--color-texto"]}} className="text-xl font-bold px-4 mb-2">
+          <Text style={{ color: colors.default["--color-texto"] }} className="text-xl font-bold px-4 mb-2">
             Destaques
           </Text>
           <Animated.FlatList
@@ -374,7 +366,7 @@ export default function LaboratorioScreen() {
             showsHorizontalScrollIndicator={false}
             snapToInterval={cardWidth + CARD_SPACING}
             decelerationRate="fast"
-            contentContainerStyle={{ paddingHorizontal: (width - cardWidth) / 4 - CARD_SPACING}}
+            contentContainerStyle={{ paddingHorizontal: (width - cardWidth) / 4 - CARD_SPACING }}
             onScroll={Animated.event(
               [{ nativeEvent: { contentOffset: { x: scrollX } } }],
               { useNativeDriver: true }
@@ -384,7 +376,7 @@ export default function LaboratorioScreen() {
 
         {/* Info Cards */}
         <View className="px-6 mt-6">
-          <Text className="text-xl font-bold mb-3" style={{color: colors.default["--color-texto"]}}>
+          <Text className="text-xl font-bold mb-3" style={{ color: colors.default["--color-texto"] }}>
             Dicas e novidades
           </Text>
           {infoCards.map(renderInfoCard)}
@@ -392,7 +384,7 @@ export default function LaboratorioScreen() {
 
         {/* Grid Items */}
         <View className="mt-4">
-          <Text className="text-xl font-bold px-6 mb-2" style={{color: colors.default["--color-texto"]}}>
+          <Text className="text-xl font-bold px-6 mb-2" style={{ color: colors.default["--color-texto"] }}>
             Todas as ferramentas
           </Text>
           {renderGridItems(getCurrentData())}

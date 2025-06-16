@@ -14,16 +14,18 @@ import { AntDesign, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
 const math = create(all);
 
 // Constantes físicas
+// Atualize as constantes físicas
 const CONSTANTS: Record<string, { value: number; unit: string }> = {
-    g: { value: 9.8, unit: 'm/s²' }, // Aceleração da gravidade
+    g: { value: 9.80665, unit: 'm/s²' }, // Aceleração da gravidade padrão
     h: { value: 6.62607015e-34, unit: 'J·s' }, // Constante de Planck
     G: { value: 6.67430e-11, unit: 'm³·kg⁻¹·s⁻²' }, // Constante gravitacional
     k: { value: 8.9875517923e9, unit: 'N·m²·C⁻²' }, // Constante de Coulomb
     μ0: { value: 4 * Math.PI * 1e-7, unit: 'N·A⁻²' }, // Permeabilidade magnética do vácuo
     c: { value: 299792458, unit: 'm/s' }, // Velocidade da luz no vácuo
-    R: { value: 8.3145, unit: 'J*mol*^{-1}*K^{-1}' }, // Constate universal dos gases
+    R: { value: 8.314462618, unit: 'J·mol⁻¹·K⁻¹' }, // Constante universal dos gases
+    pi: { value: Math.PI, unit: '' }, // Número π
+    e: { value: Math.E, unit: '' }, // Número de Euler
 };
-
 const VARIABLE_UNITS: Record<string, string> = {
     s: 'm', // Posição
     s0: 'm', // Posição inicial
@@ -107,16 +109,34 @@ const CalculatorWithTabs = () => {
      * @param unknown A variável a ser calculada
      * @returns O valor calculado para a variável desconhecida
      */
+
+    // Adicione esta função para substituir funções trigonométricas
+    const preprocessTrigonometricFunctions = (expr: string): string => {
+        // Converte graus para radianos nas funções trigonométricas
+        const trigFunctions = ['sin', 'cos', 'tan', 'asin', 'acos', 'atan'];
+
+        let processedExpr = expr;
+        for (const func of trigFunctions) {
+            const regex = new RegExp(`${func}\\(([^)]+)\\)`, 'g');
+            processedExpr = processedExpr.replace(regex, `${func}(($1) * pi / 180)`);
+        }
+
+        return processedExpr;
+    };
+
     const solveEquation = (equation: string, knownValues: Record<string, number>, unknown: string): { result: number, method: string } => {
         try {
-            // Primeiro tenta resolver simbolicamente
-            const symbolicResult = solveSymbolically(equation, knownValues, unknown);
+            // Pré-processa a equação
+            let processedEquation = preprocessTrigonometricFunctions(equation);
+
+            // Tenta resolver simbolicamente
+            const symbolicResult = solveSymbolically(processedEquation, knownValues, unknown);
             if (symbolicResult !== null && isFinite(symbolicResult) && !isNaN(symbolicResult)) {
                 return { result: symbolicResult, method: "Substituição direta" };
             }
 
             // Se a resolução simbólica falhar, usa métodos numéricos
-            const numericResult = solveNumerically(equation, knownValues, unknown);
+            const numericResult = solveNumerically(processedEquation, knownValues, unknown);
             return { result: numericResult, method: "Métodos numéricos" };
         } catch (err) {
             throw new Error(`Erro ao resolver a equação: ${err instanceof Error ? err.message : String(err)}`);
@@ -514,48 +534,53 @@ const CalculatorWithTabs = () => {
     };
 
     // Adicione esta função antes do return, junto com seus outros hooks e funções
+    // Adicione feedback visual para campos inválidos
     const getInputFields = useMemo(() => {
         if (!selectedEq || !equations[selectedEq] || !unknownVar) return null;
 
-        return equations[selectedEq]?.variables.map((varName, index) =>
-            varName !== unknownVar && !isConstant(varName) && (
-                <View key={`${selectedEq}-${varName}`} className="mb-4">
-                    <Text className="text-sm font-medium mb-1 ml-1 text-gray-600">
-                        {varName.toUpperCase()} ({getUnit(varName)})
-                    </Text>
-                    <View className="flex-row items-center">
-                        <TextInput
-                            className='flex-1 border border-1 border-gray-300 rounded-lg p-3 text-base bg-white'
-                            ref={(ref) => (inputRefs.current[varName] = ref)}
-                            placeholder={`Valor de ${varName.toUpperCase()} (ex: 1.5e-6)`}
-                            keyboardType="default"
-                            returnKeyType={index < equations[selectedEq].variables.length - 1 ? 'next' : 'done'}
-                            value={inputs[varName] || ''}
-                            onChangeText={text => {
-                                const cleanedText = text.replace(/[^0-9.eE+-]/g, '');
-                                setInputs(prev => ({ ...prev, [varName]: cleanedText }));
-                            }}
-                            style={{
-                                height: 56,
-                            }}
-                            onSubmitEditing={() => {
-                                let nextIndex = index + 1;
-                                while (nextIndex < equations[selectedEq].variables.length) {
-                                    const nextVar = equations[selectedEq].variables[nextIndex];
-                                    if (nextVar !== unknownVar && !isConstant(nextVar) && inputRefs.current[nextVar]) {
-                                        inputRefs.current[nextVar].focus();
-                                        break;
-                                    }
-                                    nextIndex++;
-                                }
-                            }}
-                        />
-                    </View>
-                </View>
-            )
-        );
-    }, [selectedEq, unknownVar, equations, inputs]); // Dependências do useMemo
+        return equations[selectedEq]?.variables.map((varName, index) => {
+            if (varName !== unknownVar && !isConstant(varName)) {
+                const isInvalid = inputs[varName] && isNaN(parseFloat(inputs[varName]));
 
+                return (
+                    <View key={`${selectedEq}-${varName}`} className="mb-4">
+                        <Text className="text-sm font-medium mb-1 ml-1 text-gray-600">
+                            {varName.toUpperCase()} ({getUnit(varName)})
+                        </Text>
+                        <View className="flex-row items-center">
+                            <TextInput
+                                className={`flex-1 border border-1 rounded-lg p-3 text-base ${isInvalid ? 'border-red-500 bg-red-50' : 'border-gray-300 bg-white'}`}
+                                ref={(ref) => (inputRefs.current[varName] = ref)}
+                                placeholder={`Valor de ${varName.toUpperCase()}`}
+                                keyboardType="numbers-and-punctuation"
+                                returnKeyType={index < equations[selectedEq].variables.length - 1 ? 'next' : 'done'}
+                                value={inputs[varName] || ''}
+                                onChangeText={text => {
+                                    const cleanedText = text.replace(/[^0-9.eE+-]/g, '');
+                                    setInputs(prev => ({ ...prev, [varName]: cleanedText }));
+                                }}
+                                style={{ height: 56 }}
+                            />
+                            {isInvalid && (
+                                <Ionicons
+                                    name="warning"
+                                    size={20}
+                                    color="#EF4444"
+                                    style={{ marginLeft: -30, zIndex: 10 }}
+                                />
+                            )}
+                        </View>
+                        {isInvalid && (
+                            <Text className="text-red-500 text-xs mt-1 ml-1">
+                                Valor inválido. Use números (ex: 1.5, -2.3e-6)
+                            </Text>
+                        )}
+                    </View>
+                );
+            }
+            return null;
+        });
+    }, [selectedEq, unknownVar, equations, inputs]);
     return (
         <Container>
             <ScrollView showsVerticalScrollIndicator={false} className="flex-1 w-full">

@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { SafeAreaView } from "react-native-safe-area-context";
 
 interface ThemeContextType {
   theme: 'light' | 'dark';

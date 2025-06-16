@@ -1,0 +1,14 @@
+{
+    "palavras": [
+      { "palavra": "PLANETA", "dica": "Corpo celeste que orbita uma estrela" },
+      { "palavra": "ESTRELA", "dica": "Corpo celeste que emite luz própria" },
+      { "palavra": "GALAXIA", "dica": "Sistema estelar gigante" },
+      { "palavra": "COMETA", "dica": "Corpo celeste com cauda luminosa" },
+      { "palavra": "ECLIPSE", "dica": "Fenômeno de ocultação de um astro" },
+      { "palavra": "NEBULOSA", "dica": "Nuvem interestelar de poeira e gás" },
+      { "palavra": "SATELITE", "dica": "Corpo que orbita outro corpo celeste" },
+      { "palavra": "ASTEROIDES", "dica": "Pequenos corpos rochosos" },
+      { "palavra": "SUPERNOVA", "dica": "Explosão estelar brilhante" },
+      { "palavra": "GRAVIDADE", "dica": "Força de atração entre massas" }
+    ]
+  }

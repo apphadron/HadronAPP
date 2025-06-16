@@ -1,4 +1,3 @@
-// app/iss.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import MapView, { Marker, Polygon, Polyline } from 'react-native-maps';

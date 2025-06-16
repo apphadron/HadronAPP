@@ -2,6 +2,8 @@ import { Stack } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import "../styles/global.css";
 import { TouchableOpacity } from "react-native";
+import { useNotifications } from '@/hooks/NotificationsProvider';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import {
   useFonts,
@@ -29,20 +31,24 @@ export default function Layout() {
     Inter_600SemiBold,
   });
 
+  //useNotifications();
+
   if (!fontsLoaded) {
     return null; // Retorna um indicador de carregamento, se necessário
   }
 
   return (
-    <ThemeProvider>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-          animation: "fade_from_bottom",
-        }}
-      >
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            animation: "fade_from_bottom",
+          }}
+        >
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }

@@ -29,19 +29,27 @@ export default function LayoutFisica() {
             },
             headerTitleAlign: "center",
             headerTintColor: "black",
-          
+
             headerLeft: () => (
               <View style={{ flexDirection: "row", alignItems: "center", borderWidth: 1, borderRadius: 100, borderColor: "black" }}>
                 <MaterialIcons
-                name="keyboard-arrow-left"
-                size={24}
-                color={colors.dark["--color-cinza-100"]}
-                onPress={() => Router.back()} />
+                  name="keyboard-arrow-left"
+                  size={24}
+                  color={colors.dark["--color-cinza-100"]}
+                  onPress={() => Router.back()} />
               </View>
             ),
           };
         }}
-      />
+      >
+
+        <Stack.Screen
+          name="livros/livroDetalhes"
+          options={{
+            headerShown: false
+          }}
+        />
+      </Stack>
     </ThemeProvider>
   );
 }

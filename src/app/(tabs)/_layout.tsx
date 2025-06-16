@@ -9,11 +9,16 @@ import { colors } from "@/styles/colors";
 
 export default function TabLayout() {
   const { width } = useWindowDimensions();
-  const TAB_WIDTH = width * 0.7;
-  const TAB_HEIGHT = 60;
   const { isLight } = useTheme();
-
-
+  
+  // Número total de abas - atualize este valor quando adicionar/remover abas
+  const TAB_COUNT = 5;
+  
+  // Cálculo responsivo para a barra de abas
+  const TAB_BAR_WIDTH = Math.min(width * 0.85, 500); // Limita a largura máxima
+  const TAB_HEIGHT = Math.min(60, width * 0.15); // Altura proporcional com limite
+  const HORIZONTAL_PADDING = width * 0.075; // Padding horizontal para centralizar
+  
   return (
     <ThemeProvider>
       <Tabs
@@ -25,17 +30,22 @@ export default function TabLayout() {
             styles.tabBar,
             {
               backgroundColor: isLight ? colors.light["--color-verde-100"] : colors.dark["--color-cinza-90"],
-              width: TAB_WIDTH,
+              width: TAB_BAR_WIDTH,
               height: TAB_HEIGHT,
               borderRadius: TAB_HEIGHT / 2,
-              bottom: 16,
-              left: "15%",
-              right: "15%",
+              bottom: Math.max(16, width * 0.04), // Responsive bottom margin
+              left: HORIZONTAL_PADDING,
+              right: HORIZONTAL_PADDING,
             },
           ],
           tabBarShowLabel: false,
-          tabBarItemStyle: styles.tabBarItemStyle,
-          
+          tabBarItemStyle: [
+            styles.tabBarItemStyle,
+            {
+              // Cada item ocupa uma fração igual da largura total
+              width: TAB_BAR_WIDTH / TAB_COUNT,
+            }
+          ],
         }}
       >
         <Tabs.Screen
@@ -65,9 +75,13 @@ export default function TabLayout() {
             ),
             tabBarIcon: ({ color, focused }) => (
               <View
-                style={[styles.iconContainer, focused && styles.iconContainerActive]}
+                style={[
+                  styles.iconContainer, 
+                  focused && styles.iconContainerActive,
+                  { width: (TAB_BAR_WIDTH / TAB_COUNT) * 0.8 } // Proporcional à largura do item
+                ]}
               >
-                <Octicons size={28} name="home" color={color} />
+                <Octicons size={Math.min(28, TAB_HEIGHT * 0.4)} name="home" color={color} />
               </View>
             ),
           }}
@@ -79,9 +93,13 @@ export default function TabLayout() {
             title: "Perfil",
             tabBarIcon: ({ color, focused }) => (
               <View
-                style={[styles.iconContainer, focused && styles.iconContainerActive]}
+                style={[
+                  styles.iconContainer, 
+                  focused && styles.iconContainerActive,
+                  { width: (TAB_BAR_WIDTH / TAB_COUNT) * 0.8 }
+                ]}
               >
-                <FontAwesome size={28} name="user-o" color={color} />
+                <FontAwesome size={Math.min(28, TAB_HEIGHT * 0.4)} name="user-o" color={color} />
               </View>
             ),
           }}
@@ -93,9 +111,13 @@ export default function TabLayout() {
             title: "Teste",
             tabBarIcon: ({ color, focused }) => (
               <View
-                style={[styles.iconContainer, focused && styles.iconContainerActive]}
+                style={[
+                  styles.iconContainer, 
+                  focused && styles.iconContainerActive,
+                  { width: (TAB_BAR_WIDTH / TAB_COUNT) * 0.8 }
+                ]}
               >
-                <FontAwesome size={28} name="cog" color={color} />
+                <FontAwesome size={Math.min(28, TAB_HEIGHT * 0.4)} name="cog" color={color} />
               </View>
             ),
           }}
@@ -107,9 +129,13 @@ export default function TabLayout() {
             title: "Teste 2",
             tabBarIcon: ({ color, focused }) => (
               <View
-                style={[styles.iconContainer, focused && styles.iconContainerActive]}
+                style={[
+                  styles.iconContainer, 
+                  focused && styles.iconContainerActive,
+                  { width: (TAB_BAR_WIDTH / TAB_COUNT) * 0.8 }
+                ]}
               >
-                <FontAwesome size={28} name="address-book-o" color={color} />
+                <FontAwesome size={Math.min(28, TAB_HEIGHT * 0.4)} name="address-book-o" color={color} />
               </View>
             ),
           }}
@@ -121,9 +147,13 @@ export default function TabLayout() {
             title: "Teste 3",
             tabBarIcon: ({ color, focused }) => (
               <View
-                style={[styles.iconContainer, focused && styles.iconContainerActive]}
+                style={[
+                  styles.iconContainer, 
+                  focused && styles.iconContainerActive,
+                  { width: (TAB_BAR_WIDTH / TAB_COUNT) * 0.8 }
+                ]}
               >
-                <FontAwesome size={28} name="address-book-o" color={color} />
+                <FontAwesome size={Math.min(28, TAB_HEIGHT * 0.4)} name="address-book-o" color={color} />
               </View>
             ),
           }}
@@ -136,15 +166,12 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   tabBar: {
     position: "absolute",
-    bottom: 16,
-    left: "15%",
-    right: "15%",
     alignSelf: "center",
     flexDirection: "row",
     justifyContent: "space-around",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 1,
+    shadowOpacity: 0.3,
     shadowRadius: 4,
     elevation: 5,
   },
@@ -152,19 +179,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 4,
+    padding: 0,
   },
   iconContainer: {
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
-    width: "100%",
-    height: "100%",
+    aspectRatio: 1,
+    height: "80%",
   },
   iconContainerActive: {
     backgroundColor: "white",
-    width: "100%",
-    height: "100%",
     alignItems: "center",
     justifyContent: "center",
   },

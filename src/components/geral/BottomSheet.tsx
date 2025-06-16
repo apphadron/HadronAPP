@@ -120,7 +120,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
-    padding: 24,
+    padding: 20,
     height: SHEET_HEIGHT,
     shadowColor: "#000",
     shadowOffset: {

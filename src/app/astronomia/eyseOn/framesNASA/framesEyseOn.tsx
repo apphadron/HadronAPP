@@ -1,4 +1,4 @@
-/*import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as ScreenOrientation from 'expo-screen-orientation';
@@ -41,4 +41,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-*/

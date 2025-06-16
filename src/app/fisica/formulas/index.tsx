@@ -242,7 +242,7 @@ const Formulas = () => {
       {isSheetOpen && selectedFormula && (
         <Sheet 
           onClose={handleSheetClose}
-          height={500} // Você pode ajustar a altura conforme necessário
+          height={500}
         >
           <FormulaDetails formula={selectedFormula} />
         </Sheet>

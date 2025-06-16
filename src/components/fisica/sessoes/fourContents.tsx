@@ -15,7 +15,7 @@ const FourContents = () => {
                     description="Não entende? A gente te explica!"
                     buttonText="ACESSAR"
                     IconComponent={IconBackgound.mulherLendo}
-                    onPress={() => router.push("/fisica/glossario")}
+                    onPress={() => router.push("/fisica/glossario/GlossarioHome")}
                 />
                 <Card
                     title="UNIDADES"
