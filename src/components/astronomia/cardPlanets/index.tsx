@@ -34,7 +34,7 @@ export function CardPlanets() {
   const router = useRouter();
 
   function goTo3D() {
-    router.push('/astronomia/PlanetasTelas');
+    router.push('/astronomia/PlanetasTelas' as any);
   }
 
   return (

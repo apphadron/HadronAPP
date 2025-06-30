@@ -4,6 +4,7 @@ import "../styles/global.css";
 import { TouchableOpacity } from "react-native";
 import { useNotifications } from '@/hooks/NotificationsProvider';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { configureReactNative } from '@/utils/reactNativeConfig';
 
 import {
   useFonts,
@@ -17,6 +18,9 @@ import {
 } from '@expo-google-fonts/poppins';
 import { ScrollView } from "react-native";
 import { ThemeProvider } from "@/components/geral/ThemeContext";
+
+// Configurar React Native e suprimir avisos
+configureReactNative();
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({

@@ -8,6 +8,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Tab, TabView } from '@rneui/themed';
 import { BlurView } from 'expo-blur';
 import { colors } from '@/styles/colors';
+import SensoresScreen from '@/app/fisica/ferramentas/laboratorio/sensores/SensoresScreen';
+import SensoresGraph from '@/app/fisica/ferramentas/laboratorio/sensores/SensoresGraph';
 
 const { width, height } = Dimensions.get('window');
 const cardWidth = width * 0.75;
@@ -291,32 +293,47 @@ export default function LaboratorioScreen() {
     }
   };
 
+  function SensoresTabs() {
+    const [tab, setTab] = useState(0);
 
+    return (
+      <View style={{ flex: 1 }}>
+        <View style={{ flexDirection: 'row', margin: 8 }}>
+          <TouchableOpacity onPress={() => setTab(0)} style={{ flex: 1, padding: 12, backgroundColor: tab === 0 ? '#3B82F6' : '#eee' }}>
+            <Text style={{ color: tab === 0 ? '#fff' : '#333', textAlign: 'center' }}>Sensores</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setTab(1)} style={{ flex: 1, padding: 12, backgroundColor: tab === 1 ? '#3B82F6' : '#eee' }}>
+            <Text style={{ color: tab === 1 ? '#fff' : '#333', textAlign: 'center' }}>Gráficos</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{ flex: 1 }}>
+          {tab === 0 ? <SensoresScreen /> : <SensoresGraph />}
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View className="flex-1 bg-gray-50">
 
       {/* Header */}
       <LinearGradient
-        colors={[colors.light["--color-roxo-90"], colors.light["--color-roxo-80"], colors.light["--color-roxo-80"]]}
+        colors={[colors.light["--color-roxo-90"], colors.light["--color-roxo-90"]]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        className="pt-4 px-3 "
+        className="pt-2 px-0"
       >
-        <View className="flex-row justify-between items-center mb-2">
+        <View className="flex-row justify-between items-center mb-2 ml-2">
           <View>
             <Text className="text-3xl font-bold text-white">Laboratório</Text>
             <Text className="text-base text-white">Experimente, meça, aprenda</Text>
           </View>
-          <TouchableOpacity className="bg-white/20 h-10 w-10 rounded-full items-center justify-center">
-            <MaterialCommunityIcons name="information-outline" size={22} color="white" />
-          </TouchableOpacity>
         </View>
 
         <Tab
           value={index}
           onChange={setIndex}
-          indicatorStyle={{ backgroundColor: 'white', height: 3, borderRadius: 3 }}
+          indicatorStyle={{ backgroundColor: 'white', height: 0, borderRadius: 3 }}
           containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         >
           {tabs.map((tab, tabIndex) => (
@@ -338,9 +355,8 @@ export default function LaboratorioScreen() {
               }}
               containerStyle={{
                 backgroundColor: index === tabIndex ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
-                //borderRadius: 8,
                 marginHorizontal: 0,
-                paddingVertical: 4
+                paddingVertical: 0
               }}
             />
           ))}
@@ -353,42 +369,48 @@ export default function LaboratorioScreen() {
         contentContainerStyle={{ paddingBottom: 40 }}
         className='bg-white'
       >
-        {/* Carousel destacado */}
-        <View className="mt-6">
-          <Text style={{ color: colors.default["--color-texto"] }} className="text-xl font-bold px-4 mb-2">
-            Destaques
-          </Text>
-          <Animated.FlatList
-            horizontal
-            data={getCurrentData().slice(0, 3)}
-            renderItem={renderCarouselItem}
-            keyExtractor={(item) => item.id}
-            showsHorizontalScrollIndicator={false}
-            snapToInterval={cardWidth + CARD_SPACING}
-            decelerationRate="fast"
-            contentContainerStyle={{ paddingHorizontal: (width - cardWidth) / 4 - CARD_SPACING }}
-            onScroll={Animated.event(
-              [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-              { useNativeDriver: true }
-            )}
-          />
-        </View>
+        {index === 1 ? (
+          <SensoresTabs />
+        ) : (
+          <>
+            {/* Carousel destacado */}
+            <View className="mt-6">
+              <Text style={{ color: colors.default["--color-texto"] }} className="text-xl font-bold px-4 mb-2">
+                Destaques
+              </Text>
+              <Animated.FlatList
+                horizontal
+                data={getCurrentData().slice(0, 3)}
+                renderItem={renderCarouselItem}
+                keyExtractor={(item) => item.id}
+                showsHorizontalScrollIndicator={false}
+                snapToInterval={cardWidth + CARD_SPACING}
+                decelerationRate="fast"
+                contentContainerStyle={{ paddingHorizontal: (width - cardWidth) / 4 - CARD_SPACING }}
+                onScroll={Animated.event(
+                  [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+                  { useNativeDriver: true }
+                )}
+              />
+            </View>
 
-        {/* Info Cards */}
-        <View className="px-6 mt-6">
-          <Text className="text-xl font-bold mb-3" style={{ color: colors.default["--color-texto"] }}>
-            Dicas e novidades
-          </Text>
-          {infoCards.map(renderInfoCard)}
-        </View>
+            {/* Info Cards */}
+            <View className="px-6 mt-6">
+              <Text className="text-xl font-bold mb-3" style={{ color: colors.default["--color-texto"] }}>
+                Dicas e novidades
+              </Text>
+              {infoCards.map(renderInfoCard)}
+            </View>
 
-        {/* Grid Items */}
-        <View className="mt-4">
-          <Text className="text-xl font-bold px-6 mb-2" style={{ color: colors.default["--color-texto"] }}>
-            Todas as ferramentas
-          </Text>
-          {renderGridItems(getCurrentData())}
-        </View>
+            {/* Grid Items */}
+            <View className="mt-4">
+              <Text className="text-xl font-bold px-6 mb-2" style={{ color: colors.default["--color-texto"] }}>
+                Todas as ferramentas
+              </Text>
+              {renderGridItems(getCurrentData())}
+            </View>
+          </>
+        )}
       </ScrollView>
 
     </View>

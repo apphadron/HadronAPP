@@ -19,8 +19,8 @@ const TabBarIcon: React.FC<TabBarIconProps> = ({ color, focused, iconName }) => 
     >
       <FontAwesome
         size={28}
-        name={iconName}
-        color={focused ? colors.verde.primary : color}
+        name={iconName as any}
+        color={focused ? colors.light['--color-verde-100'] : color}
       />
     </View>
   );

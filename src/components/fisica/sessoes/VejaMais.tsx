@@ -1,12 +1,20 @@
-import React, { useState, useRef } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, FlatList, Image } from 'react-native';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, FlatList, Image, TouchableWithoutFeedback } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons';
 import MulheresCiencia from '@/assets/img/mulheres_ciencia.png';
 import { useRouter } from 'expo-router';
+import Animated, {
+    useSharedValue,
+    useAnimatedRef,
+    withTiming,
+    runOnJS,
+} from 'react-native-reanimated';
 
 const { width } = Dimensions.get('window');
-const CARD_WIDTH = width * 0.90;
+export const CARD_WIDTH = width * 0.90;
+
+const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 
 interface CardProps {
     title: string;
@@ -20,7 +28,7 @@ interface CardProps {
 
 const Card = ({ title, description, buttonText, gradientColors, icon, onPress, rota }: CardProps) => {
     const router = useRouter();
-    
+
     return (
         <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={styles.cardContainer}>
             <LinearGradient
@@ -47,9 +55,11 @@ const Card = ({ title, description, buttonText, gradientColors, icon, onPress, r
 };
 
 const PhysicsCarousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
     const flatListRef = useRef<FlatList>(null);
     const router = useRouter();
+    const scrollOffset = useSharedValue(0);
+    const paused = useSharedValue(false); // controle de pausa
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const carouselData = [
         {
@@ -57,7 +67,7 @@ const PhysicsCarousel = () => {
             title: 'Mulheres na Ciência',
             description: 'Conheça as cientistas que revolucionaram a física e suas contribuições',
             buttonText: 'Conhecer cientistas',
-            gradientColors: ['#E4C087','#E4C087'],
+            gradientColors: ['#E4C087', '#E4C087'],
             icon: <Image source={MulheresCiencia} style={styles.imageIcon} />,
             rota: '/fisica/glossario',
         },
@@ -81,36 +91,68 @@ const PhysicsCarousel = () => {
         }
     ];
 
+    const scrollToNext = () => {
+        if (paused.value) return;
+
+        const nextOffset = scrollOffset.value + CARD_WIDTH + 20;
+        const maxOffset = (carouselData.length - 1) * (CARD_WIDTH + 20);
+        scrollOffset.value = nextOffset > maxOffset ? 0 : nextOffset;
+
+        flatListRef.current?.scrollToOffset({
+            offset: scrollOffset.value,
+            animated: true,
+        });
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            runOnJS(scrollToNext)();
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+
+    const handleTouchStart = () => {
+        paused.value = true;
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+        timeoutRef.current = setTimeout(() => {
+            paused.value = false;
+        }, 6000); // retoma após 6 segundos de inatividade
+    };
+
+
     return (
-        <View style={styles.container}>
-            <FlatList
-                ref={flatListRef}
-                data={carouselData}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                snapToInterval={CARD_WIDTH + 20}
-                decelerationRate="fast"
-                renderItem={({ item }) => (
-                    <Card
-                        title={item.title}
-                        description={item.description}
-                        buttonText={item.buttonText}
-                        gradientColors={item.gradientColors}
-                        icon={item.icon}
-                        rota={item.rota}
-                        onPress={() => router.push(item.rota)}
-                    />
-                )}
-                keyExtractor={item => item.id}
-                contentContainerStyle={styles.carouselContent}
-                onMomentumScrollEnd={(event) => {
-                    const newIndex = Math.round(
-                        event.nativeEvent.contentOffset.x / (CARD_WIDTH + 20)
-                    );
-                    setCurrentIndex(newIndex);
-                }}
-            />
-        </View>
+        <TouchableWithoutFeedback onPressIn={handleTouchStart}>
+            <View style={styles.container}>
+                <AnimatedFlatList
+                    ref={flatListRef}
+                    data={carouselData}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    snapToInterval={CARD_WIDTH + 20}
+                    decelerationRate="fast"
+                    renderItem={({ item }: { item: any }) => (
+                        <Card
+                            title={item.title}
+                            description={item.description}
+                            buttonText={item.buttonText}
+                            gradientColors={item.gradientColors}
+                            icon={item.icon}
+                            rota={item.rota}
+                            onPress={() => router.push(item.rota as any)}
+                        />
+                    )}
+                    keyExtractor={(item: any) => item.id}
+                    contentContainerStyle={styles.carouselContent}
+                    onScroll={(event) => {
+                        scrollOffset.value = event.nativeEvent.contentOffset.x;
+                    }}
+                    scrollEventThrottle={16}
+                />
+            </View>
+        </TouchableWithoutFeedback>
     );
 };
 
@@ -174,7 +216,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderColor: 'rgba(255, 255, 255, 0.5)',
-      },
+    },
     buttonText: {
         color: '#fff',
         fontWeight: '600',

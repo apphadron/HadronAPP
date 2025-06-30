@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useMemo, Suspense, useCallback } from 'react';
+/*import React, { useEffect, useRef, useState, useMemo, Suspense, useCallback } from 'react';
 import { View, StyleSheet, ActivityIndicator, Text } from 'react-native';
 import { Canvas, useFrame, useThree } from '@react-three/fiber/native';
 import { OrbitControls, useGLTF } from '@react-three/drei/native';
@@ -461,3 +461,4 @@ const styles = StyleSheet.create({
 });
 
 export default GLTFModelView;
+*/

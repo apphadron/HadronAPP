@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Nível Fácil",
+      "words": [
+        { "hint": "Maior planeta do sistema solar", "answer": "Jupiter" },
+        { "hint": "Planeta vermelho", "answer": "Marte" },
+        { "hint": "Nos dá luz e calor", "answer": "Sol" }
+      ]
+    },
+    {
+      "title": "Nível Intermediário",
+      "words": [
+        { "hint": "Satélite natural da Terra", "answer": "Lua" },
+        { "hint": "Planeta mais próximo do Sol", "answer": "Mercurio" },
+        { "hint": "Contém anéis visíveis", "answer": "Saturno" }
+      ]
+    }
+  ]

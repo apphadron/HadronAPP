@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
 import { cadastrarUsuario } from "./auth";
 
@@ -24,3 +24,4 @@ export default function Cadastro() {
     </View>
   );
 }
+*/

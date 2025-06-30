@@ -14,7 +14,6 @@ import { AntDesign, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
 const math = create(all);
 
 // Constantes físicas
-// Atualize as constantes físicas
 const CONSTANTS: Record<string, { value: number; unit: string }> = {
     g: { value: 9.80665, unit: 'm/s²' }, // Aceleração da gravidade padrão
     h: { value: 6.62607015e-34, unit: 'J·s' }, // Constante de Planck

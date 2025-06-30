@@ -180,24 +180,13 @@ export const getImageCacheStats = async (): Promise<{count: number, size: number
 export const logImageCacheContents = async (): Promise<void> => {
   try {
     const cacheMap = await getCacheMap();
-    console.log('Conteúdo do cache de imagens:');
-    
-    // Log do mapa de cache
-    console.log('Cache Map:', cacheMap);
-    
     // Detalhes de cada imagem em cache
     for (const [url, entry] of Object.entries(cacheMap)) {
       const fileInfo = await FileSystem.getInfoAsync(entry.localPath);
-      console.log(`URL: ${url}`);
-      console.log(`Local: ${entry.localPath}`);
-      console.log(`Tamanho: ${fileInfo.exists ? fileInfo.size : 'Arquivo não encontrado'} bytes`);
-      console.log('---');
     }
     
     // Estatísticas totais
     const stats = await getImageCacheStats();
-    console.log(`Total de imagens em cache: ${stats.count}`);
-    console.log(`Tamanho total do cache: ${stats.size} bytes`);
   } catch (error) {
     console.error('Erro ao logar conteúdo do cache:', error);
   }

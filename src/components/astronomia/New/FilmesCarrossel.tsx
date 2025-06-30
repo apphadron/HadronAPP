@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, Image, Pressable, Dimensions } from 'react-native';
+import { View, Text, Image, Pressable, Dimensions, TouchableOpacity } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { router } from 'expo-router';
 import Rover from '@/assets/img/rover.jpg'
 
 interface Filme {
@@ -62,8 +62,7 @@ const filmes: Filme[] = [
 
 const FilmeCard = ({ item }: { item: Filme }) => {
   return (
-    <Link href={item.link} asChild>
-      <Pressable>
+    <TouchableOpacity onPress={()=> router.push(item.link as any)}>
         <View className="mr-3 bg-gray-900 rounded-xl overflow-hidden w-full">
           <Image 
             source={item.imagem}
@@ -81,8 +80,7 @@ const FilmeCard = ({ item }: { item: Filme }) => {
             </View>
           </View>
         </View>
-      </Pressable>
-    </Link>
+      </TouchableOpacity>
   );
 };
 

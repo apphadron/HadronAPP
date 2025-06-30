@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
-import { Link } from 'expo-router';
+import { View, Text, Pressable, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 interface Ferramenta {
@@ -58,8 +58,7 @@ const ferramentas: Ferramenta[] = [
 
 const FerramentaCard = ({ ferramenta }: { ferramenta: Ferramenta }) => {
   return (
-    <Link href={ferramenta.link} asChild>
-      <Pressable>
+    <TouchableOpacity onPress={()=> ferramenta.link as any}>
         <View 
           className="rounded-xl p-4 h-28 w-32 mr-3 mb-3 justify-center items-center"
           style={{ backgroundColor: ferramenta.cor }}
@@ -69,8 +68,7 @@ const FerramentaCard = ({ ferramenta }: { ferramenta: Ferramenta }) => {
             {ferramenta.titulo}
           </Text>
         </View>
-      </Pressable>
-    </Link>
+      </TouchableOpacity>
   );
 };
 

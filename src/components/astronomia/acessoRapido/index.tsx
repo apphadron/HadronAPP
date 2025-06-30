@@ -16,7 +16,7 @@ interface FerramentaItem {
 
 const ferramentas: FerramentaItem[] = [
   { id: 1, icon: 'telescope-outline', title: 'Calculadoras Astronômicas', rota: '/astronomia/calculadoras/CalculadorasScreen' },
-  { id: 2, icon: 'swap-horizontal', title: 'Conversores', rota: '/astronomia/eyseOn' },
+  { id: 2, icon: 'swap-horizontal', title: 'Conversores', rota: '/astronomia/satelites' },
   { id: 3, icon: <NasaIcon width={50} height={50}/>, title: 'Olhos da Nasa', rota: '/astronomia/eyseOn', isCustomIcon: true },
   { id: 4, icon: 'planet', title: 'Exoplanet Archive', rota: '/astronomia/BuscaExoplanetas/SearchExoplanet' },
   { id: 5, icon: 'radio', title: 'Satelites', rota: '/astronomia/rastrearSatelite/rastrearSateliteScreen' },

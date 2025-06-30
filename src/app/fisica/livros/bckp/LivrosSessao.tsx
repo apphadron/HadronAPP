@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { View, Text, Image, Dimensions, TouchableOpacity, ScrollView, Animated, NativeScrollEvent } from "react-native";
+import { View, Text, Image, Dimensions, TouchableOpacity, ScrollView, Animated, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
 import { supabase } from '@/db/supabaseClient';
 import { router } from 'expo-router';
 import ShimmerPlaceholder from 'react-native-shimmer-placeholder';
@@ -17,7 +17,7 @@ export function ReadingSection() {
   const [livros, setLivros] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollX = useRef(new Animated.Value(0)).current;
-  const scrollViewRef = useRef<typeof Animated.ScrollView>(null);
+  const scrollViewRef = useRef<ScrollView | null>(null);
   const autoScrollAnimationRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const currentIndexRef = useRef<number>(0);
   const userScrollingRef = useRef<boolean>(false);
@@ -26,6 +26,7 @@ export function ReadingSection() {
   // Função para animar o scroll automaticamente de forma suave
   const scrollToIndex = useCallback((index: number) => {
     if (scrollViewRef.current && livros.length > 0) {
+      // @ts-ignore: scrollTo existe em Animated.ScrollView
       scrollViewRef.current.scrollTo({
         x: index * (ITEM_WIDTH + SPACING),
         animated: true
@@ -92,7 +93,7 @@ export function ReadingSection() {
     }
   };
 
-  const handleUserScrollEnd = (event: React.SyntheticEvent<NativeScrollEvent>) => {
+  const handleUserScrollEnd = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     // Calcular o índice mais próximo com base na posição atual
     const position = event.nativeEvent.contentOffset?.x;
     if (position !== undefined) {
@@ -272,8 +273,8 @@ export function ReadingSection() {
             { useNativeDriver: true }
           )}
           scrollEventThrottle={16}
-          onScrollBeginDrag={() => handleUserScrollBegin()}
-          onMomentumScrollEnd={(e) => handleUserScrollEnd(e)}
+          onScrollBeginDrag={handleUserScrollBegin}
+          onMomentumScrollEnd={handleUserScrollEnd}
         >
           {livros.map((book, index) => renderBookItem(book, index))}
         </Animated.ScrollView>

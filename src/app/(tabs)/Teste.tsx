@@ -118,9 +118,9 @@ const expandMathCapabilities = () => {
       for (const sub of substitutions) {
         if (typeof sub.replacement === 'string') {
           result = result.replace(sub.pattern, sub.replacement);
-        } else {
+        } else if (typeof sub.replacement === 'function') {
           result = result.replace(sub.pattern, (match: string, p1?: string, p2?: string) => {
-            return sub.replacement(match, p1 || '', p2 || '');
+            return (sub.replacement as (match: string, arg1: string, arg2: string) => string)(match, p1 || '', p2 || '');
           });
         }
       }
@@ -199,8 +199,8 @@ const App = () => {
 
   // Substitution rules for each conversion
   const conversions: Record<CoordinateSystem, Record<CoordinateSystem, Record<string, string>>> = {
-    // Cartesian to other systems
     cartesian: {
+      cartesian: {},
       polar: {
         x: 'r * cos(theta)',
         y: 'r * sin(theta)',
@@ -217,13 +217,13 @@ const App = () => {
         z: 'z'
       }
     },
-    // Polar to other systems
     polar: {
       cartesian: {
         r: 'sqrt(x^2 + y^2)',
         theta: 'atan2(y, x)',
         z: 'z'
       },
+      polar: {},
       spherical: {
         r: 'rho * sin(phi)',
         theta: 'theta',
@@ -235,7 +235,6 @@ const App = () => {
         z: 'z'
       }
     },
-    // Spherical to other systems
     spherical: {
       cartesian: {
         rho: 'sqrt(x^2 + y^2 + z^2)',
@@ -247,13 +246,13 @@ const App = () => {
         phi: 'atan2(r, z)',
         theta: 'theta'
       },
+      spherical: {},
       cylindrical: {
         rho: 'sqrt(r^2 + z^2)',
         phi: 'atan2(r, z)',
         theta: 'theta'
       }
     },
-    // Cylindrical to other systems
     cylindrical: {
       cartesian: {
         r: 'sqrt(x^2 + y^2)',
@@ -269,7 +268,8 @@ const App = () => {
         r: 'rho * sin(phi)',
         theta: 'theta',
         z: 'rho * cos(phi)'
-      }
+      },
+      cylindrical: {}
     }
   };
 

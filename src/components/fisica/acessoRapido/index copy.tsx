@@ -36,7 +36,7 @@ export function AcessoRapido({
       onItemPress(rota);
     } else {
       //console.log(rota);
-      router.push(rota);
+      router.push(rota as any);
     }
   }
 

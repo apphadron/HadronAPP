@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Image, Pressable, Dimensions } from 'react-native';
+import { View, Text, Image, Pressable, Dimensions, TouchableOpacity } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { Link } from 'expo-router';
+import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import Rover from '@/assets/img/rover.jpg';
 
@@ -49,8 +49,7 @@ const destaques: DestaqueItem[] = [
 
 const DestaqueCard = ({ item }: { item: DestaqueItem }) => {
   return (
-    <Link href={item.link} asChild>
-      <Pressable>
+      <TouchableOpacity onPress={() => router.push(item.link as any)}>
         <View className="rounded-2xl overflow-hidden bg-gray-900 h-48">
           <Image 
             source={item.imagem}
@@ -66,8 +65,7 @@ const DestaqueCard = ({ item }: { item: DestaqueItem }) => {
             <Text className="text-gray-300">{item.subtitulo}</Text>
           </View>
         </View>
-      </Pressable>
-    </Link>
+      </TouchableOpacity>
   );
 };
 

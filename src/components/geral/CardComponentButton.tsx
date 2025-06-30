@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, ViewProps, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, Dimensions, ViewProps, TouchableOpacity, ImageBackground, ImageSourcePropType } from 'react-native';
 import RealFakeImag from '@/assets/backgrounds/vectors/RealFakeImg';
 import FundoRoxo from '@/assets/backgrounds/Bg_card_roxo.png';
 
@@ -8,7 +8,7 @@ interface CardComponentProps {
     backgroundColor?: string;
     textColor?: string;
     image?: React.ReactNode;
-    imageBackground?: React.ReactNode;
+    imageBackground?: ImageSourcePropType;
     style?: ViewProps['style'];
 }
 

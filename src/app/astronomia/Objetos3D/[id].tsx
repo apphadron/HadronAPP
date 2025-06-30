@@ -13,7 +13,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { supabase } from '@/db/supabaseClient';
 import { colors } from '@/styles/colors';
-import GLTFModelView from './GLTFModelView';
+import GLBViewer from './GLTFModelView';
 import Sheet from '@/components/geral/BottomSheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Perseverance from '@/assets/astronomia/rovers/3dObjetos/Perseverance.glb';
@@ -44,15 +44,9 @@ interface InfoItem {
   color: string;
 }
 
-interface LoadingState {
-  isLoading: boolean;
-  error: string | null;
-  retryCount: number;
-}
-
 // Constants
 const DEFAULT_MODEL = Perseverance;
-const MAX_RETRY_ATTEMPTS = 3;
+const MAX_RETRY_ATTEMPTS = 2;
 
 // Configuração dos campos de informação
 const INFO_FIELD_CONFIG: Record<string, { icon: string; color: string; title: string }> = {
@@ -71,28 +65,23 @@ const INFO_FIELD_CONFIG: Record<string, { icon: string; color: string; title: st
   localizacao: { icon: 'map-marker-alt', color: '#16a085', title: 'Localização' },
 };
 
-// Hook customizado melhorado para dados do objeto
+// Hook simplificado para dados do objeto
 const useObjectData = (id: string | string[]) => {
-  const [state, setState] = useState<{
-    objectData: ObjectData | null;
-    infoData: InfoItem[];
-    loadingState: LoadingState;
-    modelUrl: string | null;
-  }>({
-    objectData: null,
-    infoData: [],
-    loadingState: { isLoading: true, error: null, retryCount: 0 },
-    modelUrl: null,
-  });
+  const [objectData, setObjectData] = useState<ObjectData | null>(null);
+  const [infoData, setInfoData] = useState<InfoItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [modelUrl, setModelUrl] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
 
   const getPublicUrl = useCallback((path: string): string | null => {
     if (!path || typeof path !== 'string') {
-      console.warn('Invalid path provided to getPublicUrl:', path);
+      console.warn('Invalid path provided:', path);
       return null;
     }
     
     try {
-      // Remove barras duplas e normalize o path
+      // Normaliza o path removendo barras duplas
       const normalizedPath = path.replace(/\/+/g, '/').replace(/^\//, '');
       
       const { data } = supabase.storage
@@ -133,154 +122,109 @@ const useObjectData = (id: string | string[]) => {
     return infoItems;
   }, []);
 
-  const validateObjectData = (data: any): data is ObjectData => {
-    if (!data || typeof data !== 'object') {
-      return false;
-    }
-    
-    // Verifica se tem pelo menos os campos obrigatórios
-    const requiredFields = ['id', 'nome'];
-    return requiredFields.every(field => data[field] && typeof data[field] === 'string');
-  };
-
-  const fetchObjectData = useCallback(async (retryAttempt = 0) => {
+  const fetchObjectData = useCallback(async () => {
     if (!id) {
-      setState(prev => ({
-        ...prev,
-        loadingState: { 
-          isLoading: false, 
-          error: 'ID do objeto não fornecido',
-          retryCount: retryAttempt
-        }
-      }));
+      setError('ID do objeto não fornecido');
+      setIsLoading(false);
       return;
     }
 
+    console.log(`Fetching object data for ID: ${id}`);
+    setIsLoading(true);
+    setError(null);
+
     try {
-      setState(prev => ({
-        ...prev,
-        loadingState: { 
-          isLoading: true, 
-          error: null,
-          retryCount: retryAttempt
-        }
-      }));
-
-      console.log(`Fetching object data for ID: ${id} (attempt ${retryAttempt + 1})`);
-
-      // Timeout para a query
-      const queryPromise = supabase
+      const { data, error: supabaseError } = await supabase
         .from('objetos_3d')
         .select('*')
         .eq('id', id)
         .single();
 
-      const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('Database query timeout')), 10000)
-      );
-
-      const { data, error } = await Promise.race([queryPromise, timeoutPromise]) as any;
-
-      if (error) {
-        throw new Error(`Erro ao buscar dados: ${error.message}`);
+      if (supabaseError) {
+        throw new Error(`Erro na consulta: ${supabaseError.message}`);
       }
 
       if (!data) {
-        throw new Error('Objeto não encontrado no banco de dados');
+        throw new Error('Objeto não encontrado');
       }
 
-      // Valida os dados recebidos
-      if (!validateObjectData(data)) {
-        throw new Error('Dados do objeto inválidos ou incompletos');
-      }
-
-      console.log('Object data fetched successfully:', data);
+      console.log('Object data fetched:', data);
 
       // Processa URL do modelo
-      let modelUrl: string | null = null;
+      let publicUrl: string | null = null;
       if (data.objectUrl_path) {
-        modelUrl = getPublicUrl(data.objectUrl_path);
-        if (!modelUrl) {
+        publicUrl = getPublicUrl(data.objectUrl_path);
+        if (!publicUrl) {
           console.warn('Failed to generate public URL, will use default model');
         }
-      } else {
-        console.log('No objectUrl_path found, will use default model');
       }
 
       // Processa informações
-      const infoData = processObjectInfo(data);
+      const processedInfo = processObjectInfo(data);
 
-      setState({
-        objectData: data,
-        infoData,
-        modelUrl,
-        loadingState: { isLoading: false, error: null, retryCount: retryAttempt }
-      });
+      setObjectData(data);
+      setInfoData(processedInfo);
+      setModelUrl(publicUrl);
+      setIsLoading(false);
 
-    } catch (error) {
-      console.error(`Error fetching object data (attempt ${retryAttempt + 1}):`, error);
-      
-      const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
-      
-      setState(prev => ({
-        ...prev,
-        loadingState: { 
-          isLoading: false, 
-          error: errorMessage,
-          retryCount: retryAttempt
-        }
-      }));
+    } catch (err: any) {
+      console.error('Error fetching object data:', err);
+      setError(err.message || 'Erro desconhecido');
+      setIsLoading(false);
     }
   }, [id, getPublicUrl, processObjectInfo]);
 
   const retryFetch = useCallback(() => {
-    const currentRetryCount = state.loadingState.retryCount;
-    if (currentRetryCount < MAX_RETRY_ATTEMPTS) {
-      fetchObjectData(currentRetryCount + 1);
+    if (retryCount < MAX_RETRY_ATTEMPTS) {
+      setRetryCount(prev => prev + 1);
+      fetchObjectData();
     } else {
       Alert.alert(
         'Erro',
-        'Número máximo de tentativas excedido. Verifique sua conexão e tente novamente.',
+        'Número máximo de tentativas excedido.',
         [{ text: 'OK' }]
       );
     }
-  }, [fetchObjectData, state.loadingState.retryCount]);
+  }, [fetchObjectData, retryCount]);
 
   useEffect(() => {
-    fetchObjectData(0);
+    fetchObjectData();
   }, [fetchObjectData]);
 
-  return { ...state, refetch: fetchObjectData, retryFetch };
+  return { 
+    objectData, 
+    infoData, 
+    modelUrl, 
+    isLoading, 
+    error, 
+    retryCount, 
+    refetch: fetchObjectData, 
+    retryFetch 
+  };
 };
 
-// Componentes
+// Componente de loading
 const LoadingScreen: React.FC<{ retryCount?: number }> = ({ retryCount = 0 }) => (
   <View style={styles.loadingContainer}>
     <ActivityIndicator size="large" color="#e88e14" />
     <Text style={styles.loadingText}>
-      Carregando visualizador 3D...
+      Carregando dados do objeto...
       {retryCount > 0 && ` (Tentativa ${retryCount + 1})`}
     </Text>
   </View>
 );
 
+// Componente de erro
 const ErrorScreen: React.FC<{ 
   error: string; 
   onRetry: () => void; 
   onGoBack: () => void;
-  retryCount: number;
   canRetry: boolean;
-}> = ({ error, onRetry, onGoBack, retryCount, canRetry }) => (
+}> = ({ error, onRetry, onGoBack, canRetry }) => (
   <SafeAreaView style={styles.errorContainer}>
     <FontAwesome5 name="exclamation-triangle" size={50} color="#e74c3c" />
-    <Text style={styles.errorTitle}>Erro ao carregar objeto</Text>
+    <Text style={styles.errorTitle}>Erro ao carregar dados</Text>
     <Text style={styles.errorDescription}>{error}</Text>
-    
-    {retryCount > 0 && (
-      <Text style={styles.retryInfo}>
-        Tentativas realizadas: {retryCount + 1}/{MAX_RETRY_ATTEMPTS + 1}
-      </Text>
-    )}
     
     <View style={styles.errorButtonContainer}>
       {canRetry && (
@@ -297,6 +241,7 @@ const ErrorScreen: React.FC<{
   </SafeAreaView>
 );
 
+// Componente de informações
 const InfoSheet: React.FC<{
   isOpen: boolean;
   onClose: () => void;
@@ -354,7 +299,15 @@ const ObjectScene: React.FC = () => {
   const router = useRouter();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   
-  const { objectData, infoData, loadingState, modelUrl, retryFetch } = useObjectData(id);
+  const { 
+    objectData, 
+    infoData, 
+    modelUrl, 
+    isLoading, 
+    error, 
+    retryCount, 
+    retryFetch 
+  } = useObjectData(id);
 
   const handleRetry = useCallback(() => {
     retryFetch();
@@ -370,7 +323,7 @@ const ObjectScene: React.FC = () => {
     } else {
       Alert.alert(
         'Informações',
-        'Nenhuma informação adicional disponível para este objeto.',
+        'Nenhuma informação adicional disponível.',
         [{ text: 'OK' }]
       );
     }
@@ -380,34 +333,22 @@ const ObjectScene: React.FC = () => {
     setIsSheetOpen(false);
   }, []);
 
-  // Memoized model URL
+  // URL final do modelo
   const finalModelUrl = useMemo(() => {
     return modelUrl || DEFAULT_MODEL;
   }, [modelUrl]);
 
-  // Memoized model view props
-  const modelViewProps = useMemo(() => ({
-    modelUrl: finalModelUrl,
-    backgroundColor: colors.dark["--color-cinza-80"],
-    minZoom: 3,
-    maxZoom: 20,
-    rotationSpeed: 5,
-    autoRotate: false,
-    enableAnimation: true,
-  }), [finalModelUrl]);
-
-  if (loadingState.isLoading) {
-    return <LoadingScreen retryCount={loadingState.retryCount} />;
+  if (isLoading) {
+    return <LoadingScreen retryCount={retryCount} />;
   }
 
-  if (loadingState.error) {
-    const canRetry = loadingState.retryCount < MAX_RETRY_ATTEMPTS;
+  if (error) {
+    const canRetry = retryCount < MAX_RETRY_ATTEMPTS;
     return (
       <ErrorScreen 
-        error={loadingState.error} 
+        error={error} 
         onRetry={handleRetry}
         onGoBack={handleGoBack}
-        retryCount={loadingState.retryCount}
         canRetry={canRetry}
       />
     );
@@ -418,7 +359,11 @@ const ObjectScene: React.FC = () => {
       <GestureHandlerRootView style={styles.gestureContainer}>
         {/* Visualizador 3D */}
         <View style={styles.modelContainer}>
-          <GLTFModelView {...modelViewProps} />
+          <GLBViewer
+            modelUrl={finalModelUrl}
+  
+            backgroundColor={colors.dark["--color-cinza-80"]}
+          />
         </View>
 
         {/* Botões de ação */}
@@ -467,6 +412,7 @@ const ObjectScene: React.FC = () => {
     </View>
   );
 };
+
 
 // Styles otimizados
 const styles = StyleSheet.create({

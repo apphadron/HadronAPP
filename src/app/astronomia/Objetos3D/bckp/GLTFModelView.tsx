@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+/*import React, { useEffect, useRef, useState } from 'react';
 import { View, StyleSheet, ActivityIndicator } from 'react-native';
 import { Canvas, useFrame } from '@react-three/fiber/native';
 import { OrbitControls, useGLTF } from '@react-three/drei/native';
@@ -63,9 +63,6 @@ const Model: React.FC<{ url: string, minZoom: number, maxZoom: number, rotationS
 };
 
 
-/**
- * Componente para renderizar modelos 3D GLTF com interatividade usando OrbitControls
- */
 export default function GLTFModelView({
   modelUrl,
   backgroundColor = colors.dark["--color-cinza-80"],
@@ -130,12 +127,10 @@ export default function GLTFModelView({
         </View>
       ) : (
         <Canvas style={{ flex: 1 }}>
-          {/* Luzes */}
           <ambientLight intensity={0.5} />
           <directionalLight position={[1, 1, 1]} intensity={1} />
           <directionalLight position={[-1, -1, -1]} intensity={0.5} />
           
-          {/* Controles de órbita */}
           <OrbitControls 
             minDistance={minZoom}
             maxDistance={maxZoom}
@@ -149,7 +144,6 @@ export default function GLTFModelView({
             maxPolarAngle={Math.PI * 5/6}
           />
           
-          {/* Componente do modelo */}
           <Model 
             url={localModelUrl} 
             minZoom={minZoom}
@@ -173,3 +167,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+*/

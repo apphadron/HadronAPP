@@ -19,10 +19,10 @@ const ferramentas: FerramentaItem[] = [
   { id: 2, icon: Icon.converter, title: 'Conversores', rota: '/fisica/ferramentas/conversores/HomeConversores' },
   { id: 3, icon: Icon.quiz, title: 'Fórmulas', rota: '/astronomia/BuscaExplanetas/SearchExoplanet' },
   { id: 4, icon: Icon.paquimetro, title: 'Laboratório', rota: '/fisica/ferramentas/laboratorio/LaboratorioScreen' },
-  { id: 5, icon: Icon.clock, title: 'Constantes', rota: '/fisica/ferramentas/cronometro/Cronometro' },
-  { id: 6, icon: Icon.game, title: 'Unidades de Medidas', rota: '/fisica/jogos/memoryGame/memoryGame' },
+  { id: 5, icon: Icon.clock, title: 'Constantes', rota: '/fisica/conhecendoCientistas/ConhecendoCientistas' },
+  { id: 6, icon: Icon.game, title: 'Jogos', rota: '/fisica/jogos/screens/HomeScreen' },
   { id: 7, icon: Icon.graph, title: 'Gráficos', rota: '/fisica/ferramentas/grafico/MathGrafico' },
-  { id: 8, icon: Icon.Icon360, title: 'Glossário', rota: '/fisica/areasFisica/areasFisica' },
+  { id: 8, icon: Icon.Icon360, title: 'Glossário', rota: '/fisica/jogos/PalavrasCruzadas/PalavrasCruzadasScreen' },
 ];
 
 export default function Home() {
